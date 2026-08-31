@@ -184,7 +184,7 @@ function NavContent() {
                         }}
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[360px] z-50 pointer-events-auto"
                       >
-                        <div className="bg-white/98 backdrop-blur-2xl rounded-2xl shadow-float-lg border border-cloud-grey-border overflow-hidden p-2">
+                        <div className="bg-white backdrop-blur-2xl rounded-2xl shadow-float-lg border border-cloud-grey-border overflow-hidden p-2">
                           <div className="grid gap-0.5">
                             {item.submenu?.map((subItem) => (
                               <Link
@@ -307,15 +307,6 @@ function NavContent() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Review
-              </Button>
-              <Button
-                href="/finance-health-check"
-                variant="secondary"
-                size="md"
-                className="w-full justify-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Finance Health Check
               </Button>
             </div>
           </div>

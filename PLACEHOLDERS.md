@@ -9,6 +9,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 - [ ] **Telephone Number:** `[approved business number]` (Found in `Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema)
 - [ ] **Physical Address / Office:** Sydney, NSW (Confirm exact address or specify remote availability)
 - [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). Rendered in the footer bottom bar as `ABN [ABN pending verification]`.
+- [ ] **WhatsApp Business Number:** `WHATSAPP_NUMBER` constant in `components/ui/WhatsAppButton.tsx` is set to `61400000000` (placeholder). Replace with the approved WhatsApp Business number in full international format, digits only.
 
 ---
 

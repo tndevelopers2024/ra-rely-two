@@ -85,7 +85,7 @@ export const ScrollProgress: React.FC = () => {
         type="button"
         onClick={scrollToTop}
         aria-label="Back to top"
-        className={`fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-rely-navy text-white pl-4 pr-5 py-3 shadow-float-lg border border-advisory-gold/30 font-heading text-xs font-semibold tracking-wide transition-all duration-300 hover:bg-advisory-gold hover:text-rely-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-advisory-gold focus-visible:ring-offset-2 ${
+        className={`fixed bottom-24 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-rely-navy text-white pl-4 pr-5 py-3 shadow-float-lg border border-advisory-gold/30 font-heading text-xs font-semibold tracking-wide transition-all duration-300 hover:bg-advisory-gold hover:text-rely-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-advisory-gold focus-visible:ring-offset-2 ${
           showTop && !footerVisible
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'

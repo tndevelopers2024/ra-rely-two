@@ -1,0 +1,58 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Accounts payable pipeline: invoice, three-way match, approval and payment">
+  <g stroke="#0B1B4D" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="470" x2="1200" y2="470" />
+    <line x1="0" y1="700" x2="1200" y2="700" />
+  </g>
+
+  <!-- Flow rail -->
+  <path d="M180 470 H 1030" stroke="#0B1B4D" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" />
+  <g stroke="#0B1B4D" stroke-opacity="0.20" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M372 470 l-14 -8 M372 470 l-14 8" />
+    <path d="M636 470 l-14 -8 M636 470 l-14 8" />
+    <path d="M872 470 l-14 -8 M872 470 l-14 8" />
+  </g>
+
+  <!-- Invoice document -->
+  <g transform="translate(190,360)">
+    <rect x="0" y="0" width="150" height="200" rx="14" fill="#FFFFFF" fill-opacity="0.92" stroke="#0B1B4D" stroke-opacity="0.20" stroke-width="2.5" />
+    <line x1="26" y1="40" x2="124" y2="40" stroke="#0B1B4D" stroke-opacity="0.16" stroke-width="3" stroke-linecap="round" />
+    <line x1="26" y1="72" x2="124" y2="72" stroke="#0B1B4D" stroke-opacity="0.12" stroke-width="3" stroke-linecap="round" />
+    <line x1="26" y1="104" x2="98" y2="104" stroke="#0B1B4D" stroke-opacity="0.12" stroke-width="3" stroke-linecap="round" />
+    <rect x="26" y="146" width="74" height="24" rx="7" fill="#C4A35A" fill-opacity="0.3" />
+  </g>
+
+  <!-- Three-way match -->
+  <g transform="translate(470,400)">
+    <circle cx="0" cy="0" r="44" fill="#132766" fill-opacity="0.10" stroke="#0B1B4D" stroke-opacity="0.18" stroke-width="2.5" />
+    <circle cx="70" cy="0" r="44" fill="#132766" fill-opacity="0.10" stroke="#0B1B4D" stroke-opacity="0.18" stroke-width="2.5" />
+    <circle cx="35" cy="58" r="44" fill="#C4A35A" fill-opacity="0.18" stroke="#C4A35A" stroke-opacity="0.5" stroke-width="2.5" />
+  </g>
+
+  <!-- Approval check node -->
+  <g transform="translate(710,430)">
+    <circle r="52" fill="#0B1B4D" fill-opacity="0.06" stroke="#C4A35A" stroke-opacity="0.55" stroke-width="3" />
+    <path d="M-22 2 l14 14 l30 -34" stroke="#A6863D" stroke-opacity="0.95" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Payment -->
+  <g transform="translate(960,430)">
+    <circle r="56" fill="#C4A35A" fill-opacity="0.16" stroke="#C4A35A" stroke-opacity="0.55" stroke-width="3" />
+    <circle r="34" fill="none" stroke="#A6863D" stroke-opacity="0.55" stroke-width="3" />
+    <path d="M0 -16 v32 M-11 -7 h22 M-11 7 h22" stroke="#A6863D" stroke-opacity="0.75" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Approval stack, upper area -->
+  <g transform="translate(360,190)" stroke="#0B1B4D" stroke-opacity="0.12" stroke-width="2.5" fill="none">
+    <rect x="0" y="16" width="150" height="66" rx="12" />
+    <rect x="14" y="4" width="150" height="66" rx="12" fill="#FFFFFF" fill-opacity="0.7" />
+    <line x1="34" y1="30" x2="120" y2="30" />
+    <line x1="34" y1="48" x2="96" y2="48" />
+  </g>
+
+  <!-- Duplicate-check magnifier -->
+  <g transform="translate(880,210)" stroke="#0B1B4D" stroke-opacity="0.16" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="0" r="34" />
+    <line x1="24" y1="24" x2="48" y2="48" />
+  </g>
+</svg>

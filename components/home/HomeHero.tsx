@@ -16,7 +16,7 @@ import { gsap, prefersReducedMotion, useIsoLayoutEffect } from '@/lib/gsap';
 import { StatCounter } from '@/components/ui/StatCounter';
 
 const trustBadges = [
-  'Australian point of contact',
+  'One accountable point of contact',
   'Documented SOPs',
   'Seamless accounting collaboration',
 ];
@@ -27,7 +27,7 @@ const heroStats = [
   { value: 14, suffix: ' days', label: 'Faster average collection' },
   { value: 5, suffix: 'th day', label: 'Management pack delivery' },
   { value: 100, suffix: '%', label: 'Invoices matched & verified' },
-  { value: 1, suffix: ' lead', label: 'Australian point of contact' },
+  { value: 1, suffix: ' lead', label: 'Dedicated point of contact' },
 ];
 
 // The two headline metrics carried at the top of the control panel.
@@ -182,6 +182,16 @@ export const HomeHero: React.FC = () => {
         {/* Base wash: warm ivory in the top-left, clearing to white at the fold */}
         <div className="absolute inset-0 bg-[linear-gradient(160deg,#FAF8F3_0%,#FFFFFF_45%,#F4F6F9_100%)]" />
 
+        {/* Finance illustration — rising chart, ledger grid and data points.
+            Anchored bottom-right and radially masked so it never reaches the
+            headline column and dissolves before the fold. */}
+        <img
+          src="/assets/images/hero-finance-bg.svg"
+          alt=""
+          aria-hidden="true"
+          className="absolute right-0 bottom-0 hidden lg:block w-[64%] max-w-[900px] select-none opacity-90 [mask-image:radial-gradient(135%_135%_at_100%_100%,black_45%,transparent_88%)]"
+        />
+
         {/* Broad gold field behind the control panel, anchoring the right side */}
         <div className="absolute -top-32 right-[-18%] w-[54rem] h-[54rem] rounded-full bg-[radial-gradient(circle,rgba(196,163,90,0.18)_0%,rgba(196,163,90,0.05)_45%,transparent_70%)]" />
 
@@ -227,7 +237,7 @@ export const HomeHero: React.FC = () => {
                 <span className="relative h-2 w-2 rounded-full bg-advisory-gold" />
               </span>
               <span className="font-heading text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-charcoal-muted">
-                Australian finance operations
+                Finance operations
                 <span className="text-advisory-gold-dark"> &amp; business insight</span>
               </span>
             </motion.div>
@@ -248,7 +258,7 @@ export const HomeHero: React.FC = () => {
               variants={getVariant(subtitleVariant)}
               className="mt-7 pl-6 sm:pl-7 text-base sm:text-lg text-charcoal/85 leading-relaxed max-w-xl"
             >
-              Rely Advisory Group helps growing Australian businesses improve accounts payable,
+              Rely Advisory Group helps growing businesses improve accounts payable,
               strengthen receivables, streamline finance processes and gain clearer visibility of
               performance, without the cost of building a large internal finance team.
             </motion.p>

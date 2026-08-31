@@ -8,9 +8,9 @@ import { staggerContainer, fadeInUp } from '@/lib/animations';
 const reasons = [
   {
     icon: UserCheck,
-    title: 'Australian point of contact',
+    title: 'One point of contact',
     description:
-      'A consistent Australian relationship lead who understands your business and local operating environment.',
+      'A consistent relationship lead who knows your business and how it runs day to day.',
   },
   {
     icon: FileCheck,

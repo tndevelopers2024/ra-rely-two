@@ -1,0 +1,41 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reliability and clarity: a steady foundation supporting a clear upward path">
+  <g stroke="#0B1B4D" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="470" x2="1200" y2="470" />
+    <line x1="0" y1="700" x2="1200" y2="700" />
+  </g>
+
+  <!-- Stable stacked foundation -->
+  <g>
+    <rect x="300" y="600" width="620" height="40" rx="10" fill="#0B1B4D" fill-opacity="0.14" />
+    <rect x="350" y="548" width="520" height="40" rx="10" fill="#0B1B4D" fill-opacity="0.10" />
+    <rect x="400" y="496" width="420" height="40" rx="10" fill="#C4A35A" fill-opacity="0.22" />
+  </g>
+
+  <!-- Upward path / steps -->
+  <path d="M420 470 L 560 470 L 560 400 L 700 400 L 700 330 L 840 330 L 840 250 L 980 250"
+    stroke="#0B1B4D" stroke-opacity="0.18" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M420 470 L 560 470 L 560 400 L 700 400 L 700 330 L 840 330 L 840 250 L 980 250"
+    stroke="#C4A35A" stroke-opacity="0.45" stroke-width="3.5" stroke-dasharray="2 12" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <g fill="#FFFFFF" stroke="#C4A35A" stroke-width="3">
+    <circle cx="560" cy="400" r="7" />
+    <circle cx="700" cy="330" r="7" />
+    <circle cx="840" cy="250" r="7" />
+    <circle cx="980" cy="250" r="9" />
+  </g>
+
+  <!-- Concentric target, upper-left -->
+  <g transform="translate(300,260)" fill="none">
+    <circle r="76" stroke="#0B1B4D" stroke-opacity="0.10" stroke-width="3" />
+    <circle r="50" stroke="#0B1B4D" stroke-opacity="0.12" stroke-width="3" />
+    <circle r="24" stroke="#C4A35A" stroke-opacity="0.5" stroke-width="3" />
+    <circle r="6" fill="#C4A35A" fill-opacity="0.5" stroke="none" />
+  </g>
+
+  <!-- Compass needle, right -->
+  <g transform="translate(1010,470)" fill="none">
+    <circle r="60" stroke="#0B1B4D" stroke-opacity="0.12" stroke-width="3" />
+    <path d="M0 -40 L 14 8 L 0 0 L -14 8 Z" fill="#C4A35A" fill-opacity="0.45" stroke="none" />
+    <path d="M0 40 L 14 -8 L 0 0 L -14 -8 Z" fill="#0B1B4D" fill-opacity="0.16" stroke="none" />
+  </g>
+</svg>

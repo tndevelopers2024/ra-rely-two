@@ -8,8 +8,8 @@ import { staggerContainer, fadeInUp } from '@/lib/animations';
 const trustPillars = [
   {
     icon: ShieldCheck,
-    title: 'Australian oversight',
-    description: 'Local relationship lead & governance',
+    title: 'Senior oversight',
+    description: 'Dedicated relationship lead & governance',
   },
   {
     icon: Sliders,

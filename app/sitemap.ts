@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/faq',
     '/contact',
     '/book-a-review',
-    '/finance-health-check',
     '/privacy',
     '/terms',
   ];

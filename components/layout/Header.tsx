@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
                         }}
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[360px]"
                       >
-                        <div className="bg-white/98 backdrop-blur-2xl rounded-2xl shadow-float-lg border border-cloud-grey-border overflow-hidden p-2">
+                        <div className="bg-white backdrop-blur-2xl rounded-2xl shadow-float-lg border border-cloud-grey-border overflow-hidden p-2">
                           <div className="grid gap-0.5">
                             {item.submenu?.map((subItem) => (
                               <Link
@@ -311,16 +311,8 @@ export const Header: React.FC = () => {
                 >
                   Book a Free Finance Review
                 </Button>
-                <Button
-                  href="/finance-health-check"
-                  variant="outline-white"
-                  size="md"
-                  className="w-full justify-center"
-                >
-                  Take 3-Minute Health Check
-                </Button>
                 <div className="text-center pt-2 text-xs text-white/50">
-                  Australian oversight • Confidential & Secure
+                  Senior oversight • Confidential & Secure
                 </div>
               </motion.div>
             </div>

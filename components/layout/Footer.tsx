@@ -42,14 +42,12 @@ const footerCompany = [
 const footerResources = [
   { name: "Insights & Articles", href: "/insights" },
   { name: "Frequently Asked Questions", href: "/faq" },
-  { name: "Finance Health Check", href: "/finance-health-check" },
   { name: "Privacy Policy", href: "/privacy" },
   { name: "Terms & Disclaimer", href: "/terms" },
 ];
 
 const footerGetStarted = [
   { name: "Book a Review (30 min)", href: "/book-a-review" },
-  { name: "Finance Health Check (3 min)", href: "/finance-health-check" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -58,7 +56,7 @@ const footerGetStarted = [
 const assurances = [
   {
     icon: Users,
-    title: "Named Australian lead",
+    title: "Named engagement lead",
     detail: "One accountable point of contact for every engagement.",
   },
   {
@@ -140,7 +138,7 @@ export const Footer: React.FC = () => {
                   The Rely Promise
                 </div>
                 <WordReveal
-                  text="Australian relationship management. Structured finance operations. Secure delivery. Actionable business insight."
+                  text="Dedicated relationship management. Structured finance operations. Secure delivery. Actionable business insight."
                   dim="rgba(255, 255, 255, 0.28)"
                   bright="#ffffff"
                   className="text-white text-base sm:text-lg font-medium leading-snug"
@@ -155,10 +153,10 @@ export const Footer: React.FC = () => {
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
                 <Link
-                  href="/finance-health-check"
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/25 text-white/85 hover:text-rely-navy hover:bg-white hover:border-white font-heading font-semibold text-sm rounded-full transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  3-Min Health Check
+                  Talk to Rely
                 </Link>
               </div>
             </div>
@@ -200,7 +198,7 @@ export const Footer: React.FC = () => {
               <p className="text-white/65 text-sm max-w-sm leading-relaxed">
                 Better finance operations. Clearer business decisions. Practical
                 operational support, process improvement, and decision-focused
-                reporting for Australian SMEs.
+                reporting for growing businesses.
               </p>
 
               {/* Contact details */}
@@ -372,7 +370,7 @@ export const Footer: React.FC = () => {
               {serviceAreas.map((area) => (
                 <li
                   key={area}
-                  className="rounded-full border border-white/12 bg-white/5 px-4 py-1.5 text-xs text-white/60"
+                  className="rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/60"
                 >
                   {area}
                 </li>

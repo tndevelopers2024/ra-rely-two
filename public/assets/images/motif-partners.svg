@@ -1,0 +1,42 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Accounting practice and finance operations working as complementary partners">
+  <g stroke="#0B1B4D" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="230" x2="1200" y2="230" />
+    <line x1="0" y1="470" x2="1200" y2="470" />
+    <line x1="0" y1="710" x2="1200" y2="710" />
+  </g>
+
+  <!-- Two overlapping panels -->
+  <g>
+    <rect x="330" y="300" width="360" height="340" rx="28" fill="#132766" fill-opacity="0.10" stroke="#0B1B4D" stroke-opacity="0.18" stroke-width="2.5" />
+    <rect x="560" y="260" width="360" height="340" rx="28" fill="#C4A35A" fill-opacity="0.14" stroke="#C4A35A" stroke-opacity="0.45" stroke-width="2.5" />
+  </g>
+
+  <!-- Left panel content: compliance -->
+  <g transform="translate(366,344)" stroke="#0B1B4D" stroke-opacity="0.16" stroke-width="3" stroke-linecap="round">
+    <line x1="0" y1="0" x2="150" y2="0" />
+    <line x1="0" y1="34" x2="120" y2="34" />
+    <line x1="0" y1="68" x2="140" y2="68" />
+    <line x1="0" y1="102" x2="90" y2="102" />
+  </g>
+
+  <!-- Right panel content: operations checks -->
+  <g transform="translate(600,300)">
+    <path d="M0 30 l14 14 l26 -30" stroke="#A6863D" stroke-opacity="0.85" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="58" y1="34" x2="240" y2="34" stroke="#0B1B4D" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" />
+    <path d="M0 90 l14 14 l26 -30" stroke="#A6863D" stroke-opacity="0.85" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="58" y1="94" x2="240" y2="94" stroke="#0B1B4D" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" />
+    <path d="M0 150 l14 14 l26 -30" stroke="#A6863D" stroke-opacity="0.85" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="58" y1="154" x2="200" y2="154" stroke="#0B1B4D" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Shared node in the overlap -->
+  <g transform="translate(625,450)">
+    <circle r="34" fill="#FFFFFF" fill-opacity="0.9" stroke="#C4A35A" stroke-opacity="0.6" stroke-width="3" />
+    <path d="M-13 0 h26 M0 -13 v26" stroke="#0B1B4D" stroke-opacity="0.3" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Exchange arrows -->
+  <g stroke="#0B1B4D" stroke-opacity="0.18" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M470 700 C 560 740, 690 740, 780 700 M780 700 l-6 -20 M780 700 l-20 -2" />
+  </g>
+</svg>

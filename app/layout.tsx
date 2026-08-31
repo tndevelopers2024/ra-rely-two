@@ -7,6 +7,7 @@ import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Rely Advisory Group",
   },
   description:
-    "Improve accounts payable, receivables, finance processes and reporting with practical support for growing Australian businesses.",
+    "Improve accounts payable, receivables, finance processes and reporting with practical support for growing businesses across Australia.",
   keywords: [
     "finance operations",
     "outsourced accounts payable",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     "management reporting",
     "finance process improvement",
     "Power BI dashboards",
-    "Australian SME finance",
+    "SME finance operations",
   ],
   authors: [{ name: "Rely Advisory Group" }],
   creator: "Rely Advisory Group",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "Rely Advisory Group",
     title: "Finance operations and advisory support | Rely Advisory Group",
     description:
-      "Improve accounts payable, receivables, finance processes and reporting with practical support for growing Australian businesses.",
+      "Improve accounts payable, receivables, finance processes and reporting with practical support for growing businesses across Australia.",
     images: [
       {
         url: "/assets/og/og-image.svg",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Finance operations and advisory support | Rely Advisory Group",
     description:
-      "Improve accounts payable, receivables, finance processes and reporting with practical support for growing Australian businesses.",
+      "Improve accounts payable, receivables, finance processes and reporting with practical support for growing businesses across Australia.",
     images: ["/assets/og/og-image.svg"],
   },
   robots: {
@@ -112,6 +113,9 @@ export default function RootLayout({
 
         {/* Global Footer */}
         <Footer />
+
+        {/* Floating WhatsApp contact action */}
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -1,0 +1,52 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A staged engagement roadmap with milestones and checkpoints">
+  <g stroke="#0B1B4D" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="470" x2="1200" y2="470" />
+    <line x1="0" y1="700" x2="1200" y2="700" />
+  </g>
+
+  <!-- Winding roadmap path -->
+  <path d="M150 560 C 340 560, 340 380, 520 380 C 700 380, 700 560, 880 560 C 1000 560, 1030 460, 1080 400"
+    stroke="#0B1B4D" stroke-opacity="0.16" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M150 560 C 340 560, 340 380, 520 380 C 700 380, 700 560, 880 560 C 1000 560, 1030 460, 1080 400"
+    stroke="#C4A35A" stroke-opacity="0.5" stroke-width="4" stroke-dasharray="2 12" fill="none" stroke-linecap="round" />
+
+  <!-- Milestone checkpoints -->
+  <g>
+    <g transform="translate(180,560)">
+      <circle r="30" fill="#FFFFFF" fill-opacity="0.9" stroke="#0B1B4D" stroke-opacity="0.22" stroke-width="3" />
+      <text x="-8" y="8" font-family="monospace" font-size="24" fill="#0B1B4D" fill-opacity="0.4">1</text>
+    </g>
+    <g transform="translate(520,380)">
+      <circle r="34" fill="#0B1B4D" fill-opacity="0.06" stroke="#C4A35A" stroke-opacity="0.55" stroke-width="3" />
+      <text x="-8" y="9" font-family="monospace" font-size="26" fill="#A6863D" fill-opacity="0.75">2</text>
+    </g>
+    <g transform="translate(880,560)">
+      <circle r="34" fill="#0B1B4D" fill-opacity="0.06" stroke="#C4A35A" stroke-opacity="0.55" stroke-width="3" />
+      <text x="-8" y="9" font-family="monospace" font-size="26" fill="#A6863D" fill-opacity="0.75">3</text>
+    </g>
+    <g transform="translate(1080,400)">
+      <circle r="40" fill="#C4A35A" fill-opacity="0.16" stroke="#C4A35A" stroke-opacity="0.6" stroke-width="3" />
+      <path d="M-16 2 l11 11 l22 -26" stroke="#A6863D" stroke-opacity="0.95" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+
+  <!-- Milestone flags / cards above checkpoints -->
+  <g stroke="#0B1B4D" stroke-opacity="0.14" stroke-width="2.5" fill="none">
+    <g transform="translate(150,430)">
+      <rect x="0" y="0" width="130" height="72" rx="10" fill="#FFFFFF" fill-opacity="0.7" />
+      <line x1="20" y1="24" x2="104" y2="24" />
+      <line x1="20" y1="46" x2="80" y2="46" />
+    </g>
+    <g transform="translate(455,240)">
+      <rect x="0" y="0" width="130" height="72" rx="10" fill="#FFFFFF" fill-opacity="0.7" />
+      <line x1="20" y1="24" x2="104" y2="24" />
+      <line x1="20" y1="46" x2="80" y2="46" />
+    </g>
+    <g transform="translate(815,620)">
+      <rect x="0" y="0" width="130" height="72" rx="10" fill="#FFFFFF" fill-opacity="0.7" />
+      <line x1="20" y1="24" x2="104" y2="24" />
+      <line x1="20" y1="46" x2="80" y2="46" />
+    </g>
+  </g>
+</svg>

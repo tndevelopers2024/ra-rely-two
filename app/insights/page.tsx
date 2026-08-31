@@ -27,6 +27,7 @@ export default function InsightsPage() {
     <>
             <PageHero
         eyebrow="PRACTICAL KNOWLEDGE FOR GROWING BUSINESSES"
+            motif="insights"
         title="Finance operations made clearer"
         description="Plain-English guidance for business owners, finance teams and accounting partners who want stronger processes, clearer reporting and better commercial decisions."
       />
@@ -66,9 +67,9 @@ export default function InsightsPage() {
 
       <CTASection
         title="Check your finance operations resilience"
-        description="Complete the 3-minute diagnostic assessment to identify your key operational pressure points."
-        buttonText="Complete the Finance Health Check"
-        buttonHref="/finance-health-check"
+        description="Book a focused 30-minute review to identify your key operational pressure points and the most practical next step."
+        buttonText="Book a Finance Operations Review"
+        buttonHref="/book-a-review"
       />
     </>
   );

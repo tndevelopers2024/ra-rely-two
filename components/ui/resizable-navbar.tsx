@@ -212,7 +212,7 @@ export const MobileNavMenu = ({
           exit={{ opacity: 0, y: -10, scale: 0.98 }}
           transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
           className={cn(
-            "fixed inset-x-3 sm:inset-x-6 top-20 z-[70] max-h-[85vh] overflow-y-auto rounded-3xl bg-white/98 backdrop-blur-3xl p-6 sm:p-8 shadow-float-lg border border-cloud-grey-border",
+            "fixed inset-x-3 sm:inset-x-6 top-20 z-[70] max-h-[85vh] overflow-y-auto rounded-3xl bg-white backdrop-blur-3xl p-6 sm:p-8 shadow-float-lg border border-cloud-grey-border",
             className
           )}
         >

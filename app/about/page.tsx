@@ -7,13 +7,14 @@ import { User } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About Rely Advisory Group',
   description:
-    'Learn how Rely combines reliable finance operations, process improvement and decision-focused reporting for Australian businesses.',
+    'Learn how Rely combines reliable finance operations, process improvement and decision-focused reporting for businesses across Australia.',
 };
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
+        motif="about"
         eyebrow="DEPENDABLE DELIVERY. PRACTICAL ADVICE."
         title="Finance support businesses can rely on"
         description="Rely Advisory Group was created to help growing businesses bring greater structure, visibility and commercial value to their day-to-day finance operations."

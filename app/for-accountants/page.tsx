@@ -15,6 +15,7 @@ export default function ForAccountantsPage() {
     <>
             <PageHero
         eyebrow="FOR ACCOUNTANTS AND ADVISERS"
+            motif="partners"
         title="Reliable finance operations support for your clients"
         description="Rely works alongside accounting firms to provide practical AP, AR, reporting and process support, allowing accountants to remain focused on tax, compliance and higher-value advisory work."
       />

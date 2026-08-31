@@ -15,6 +15,7 @@ export default function IndustriesPage() {
     <>
             <PageHero
         eyebrow="INDUSTRY-FOCUSED SUPPORT"
+            motif="industries"
         title="Built around the way your business operates"
         description="Every industry has different billing cycles, supplier pressures and performance measures. Rely adapts the operating model and reporting to the realities of the client's business."
       />

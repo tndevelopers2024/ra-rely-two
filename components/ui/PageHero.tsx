@@ -12,6 +12,35 @@ export interface Crumb {
   href?: string;
 }
 
+/** Decorative background illustration keyed to the page's subject.
+ *  Each page owns a distinct motif — nothing is shared with the home banner. */
+export type HeroMotif =
+  | 'advisory'
+  | 'solutions'
+  | 'payable'
+  | 'receivable'
+  | 'process'
+  | 'reporting'
+  | 'work'
+  | 'partners'
+  | 'industries'
+  | 'insights'
+  | 'about';
+
+const MOTIF_SRC: Record<HeroMotif, string> = {
+  advisory: '/assets/images/motif-advisory.svg',
+  solutions: '/assets/images/motif-solutions.svg',
+  payable: '/assets/images/motif-payable.svg',
+  receivable: '/assets/images/motif-receivable.svg',
+  process: '/assets/images/motif-process.svg',
+  reporting: '/assets/images/motif-reporting.svg',
+  work: '/assets/images/motif-work.svg',
+  partners: '/assets/images/motif-partners.svg',
+  industries: '/assets/images/motif-industries.svg',
+  insights: '/assets/images/motif-insights.svg',
+  about: '/assets/images/motif-about.svg',
+};
+
 interface PageHeroProps {
   eyebrow: string;
   title: string;
@@ -22,6 +51,8 @@ interface PageHeroProps {
   breadcrumbs?: Crumb[];
   /** Short supporting facts, rendered as pills under the copy. */
   highlights?: string[];
+  /** Which decorative illustration sits behind the banner. */
+  motif?: HeroMotif;
 }
 
 const stagger = {
@@ -42,10 +73,12 @@ export const PageHero: React.FC<PageHeroProps> = ({
   align = 'left',
   breadcrumbs,
   highlights,
+  motif = 'advisory',
 }) => {
   const shouldReduceMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const isCenter = align === 'center';
+  const motifSrc = MOTIF_SRC[motif] ?? MOTIF_SRC.advisory;
 
   // Same layered exit as the home banner, so every page departs identically.
   useIsoLayoutEffect(() => {
@@ -105,6 +138,18 @@ export const PageHero: React.FC<PageHeroProps> = ({
       {/* ---- Layered banner background ---- */}
       <div data-pagehero-bg className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-cloud-grey/70 via-white to-warm-ivory-light/50" />
+
+        {/* Subject illustration — anchored bottom-right, radially masked so it
+            stays clear of the copy column and fades before the lower edge. */}
+        <img
+          src={motifSrc}
+          alt=""
+          aria-hidden="true"
+          className={cn(
+            'absolute right-0 bottom-0 hidden lg:block w-[54%] max-w-[800px] select-none [mask-image:radial-gradient(135%_135%_at_100%_100%,black_42%,transparent_86%)]',
+            isCenter ? 'opacity-[0.5] lg:w-[44%]' : 'opacity-80'
+          )}
+        />
 
         {/* Navy aurora, top-left */}
         <div className="absolute -top-48 -left-40 w-[34rem] h-[34rem] rounded-full bg-[radial-gradient(circle,rgba(11,27,77,0.09)_0%,transparent_65%)]" />

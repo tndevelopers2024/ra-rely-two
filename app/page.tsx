@@ -24,7 +24,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Finance operations and advisory support | Rely Advisory Group',
   description:
-    'Improve accounts payable, receivables, finance processes and reporting with practical support for growing Australian businesses.',
+    'Improve accounts payable, receivables, finance processes and reporting with practical support for growing businesses across Australia.',
   alternates: {
     canonical: 'https://relyadvisory.com.au/',
   },
@@ -37,7 +37,7 @@ export default function HomePage() {
     '@type': 'ProfessionalService',
     name: 'Rely Advisory Group',
     description:
-      'Finance operations, accounts payable, accounts receivable, finance process improvement and management reporting for Australian businesses.',
+      'Finance operations, accounts payable, accounts receivable, finance process improvement and management reporting for businesses across Australia.',
     url: 'https://relyadvisory.com.au',
     logo: 'https://relyadvisory.com.au/logo.svg',
     telephone: '[approved business number]',
@@ -168,7 +168,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="THE RELY DIFFERENCE"
             title="Why businesses choose Rely"
-            description="Dependable delivery, local Australian accountability, and reporting designed for management decisions."
+            description="Dependable delivery, clear accountability, and reporting designed for management decisions."
             align="left"
           />
 
@@ -183,7 +183,6 @@ export default function HomePage() {
         buttonText="Book your free review"
         buttonHref="/book-a-review"
         microcopy="No obligation. A focused 30-minute conversation about your current finance operations."
-        showHealthCheckAlt={true}
       />
     </>
   );
