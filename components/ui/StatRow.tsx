@@ -47,7 +47,7 @@ export const StatRow: React.FC<StatRowProps> = ({
           key={stat.label}
           variants={fadeInUp}
           className={cn(
-            'px-1 sm:px-6',
+            'min-w-0 px-1 sm:px-6',
             i > 0 && 'lg:border-l',
             i % 2 === 1 && 'border-l pl-5 sm:pl-6 lg:pl-6',
             isDark ? 'border-white/15' : 'border-cloud-grey-border'
@@ -56,7 +56,7 @@ export const StatRow: React.FC<StatRowProps> = ({
           <dt className="sr-only">{stat.label}</dt>
           <dd
             className={cn(
-              'font-heading text-2xl font-bold tabular-nums sm:text-3xl lg:text-4xl',
+              '[overflow-wrap:anywhere] font-heading text-2xl font-bold tabular-nums sm:text-3xl lg:text-4xl',
               isDark ? 'text-white' : 'text-rely-navy'
             )}
           >

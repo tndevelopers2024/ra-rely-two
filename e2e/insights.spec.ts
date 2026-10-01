@@ -1,35 +1,34 @@
 import { test, expect } from '@playwright/test';
+import { articles } from '../lib/data/articles';
 
-test.describe('Insights Page', () => {
-  test('should allow searching and filtering insights', async ({ page }) => {
-    // Navigate to insights page
-    await page.goto('/insights');
-    
-    // Check search input presence
-    const searchInput = page.getByPlaceholder(/search/i).first();
-    // Wait for input to be visible, if not present gracefully skip or fail
-    if (await searchInput.isVisible()) {
-      await searchInput.fill('tax');
-      await page.waitForTimeout(500); // debounce wait
-    }
+test.use({ reducedMotion: 'reduce' });
 
-    // Check category filters presence (e.g. buttons)
-    const filterButtons = page.locator('button', { hasText: /category|filter/i }).first();
-    if (await filterButtons.isVisible()) {
-      await filterButtons.click();
-    }
-
-    // Navigate to a specific insight article
-    const firstArticle = page.locator('a[href^="/insights/"]').first();
-    if (await firstArticle.isVisible()) {
-      await firstArticle.click();
-      
-      // Verify we navigated to the article page
-      await expect(page).toHaveURL(/\/insights\/.+/);
-      
-      // Verify title is present on the article page
-      const title = await page.locator('h1').first();
-      await expect(title).toBeVisible();
+for (const width of [1440, 390]) {
+  test.describe(`Blog navigation at ${width}px`, () => {
+    test.use({ viewport: { width, height: 900 } });
+    for (const article of articles) {
+      test(`whole card opens ${article.slug} and contents links reach headings`, async ({ page }) => {
+        await page.goto('/insights');
+        await expect(page.locator('[aria-hidden="true"][class*="z-[100]"]')).toHaveCount(0);
+        const card = page.locator(`a[href="/insights/${article.slug}"]`).first();
+        await card.click({ position: { x: 12, y: 12 } });
+        await expect(page).toHaveURL(`/insights/${article.slug}`);
+        await expect(page.locator('h1')).toHaveText(article.title);
+        const links = page.getByRole('navigation', { name: 'Article contents' }).locator('a');
+        expect(await links.count()).toBeGreaterThan(0);
+        for (let i = 0; i < await links.count(); i++) {
+          const link = links.nth(i);
+          const hash = await link.getAttribute('href');
+          await link.click();
+          await expect(page.locator(hash!)).toBeInViewport();
+        }
+        const related = page.locator('a').filter({ hasText: 'Read insight' }).first();
+        const relatedHref = await related.getAttribute('href');
+        await related.click();
+        await expect(page).toHaveURL(relatedHref!);
+        await page.getByRole('link', { name: 'Back to Insights' }).click();
+        await expect(page).toHaveURL('/insights');
+      });
     }
   });
-});
+}

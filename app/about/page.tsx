@@ -68,7 +68,7 @@ export default function AboutPage() {
                 <User className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-lg text-rely-navy">Roger M</h3>
+                <h3 className="font-heading font-bold text-lg text-rely-navy">Rely Advisory Leadership</h3>
                 <span className="text-xs font-mono bg-advisory-gold/20 text-rely-navy px-2 py-0.5 rounded">
                   Founder & Engagement Lead
                 </span>

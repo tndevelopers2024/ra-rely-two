@@ -1,7 +1,8 @@
 'use client';
 
+import { usePrefersReducedMotion } from '@/lib/animations';
 import React, { useRef } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import {
   ArrowRight,
@@ -117,7 +118,7 @@ const panelVariant = {
 };
 
 export const HomeHero: React.FC = () => {
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = usePrefersReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
 
   // If reduced motion, use simpler fade variants

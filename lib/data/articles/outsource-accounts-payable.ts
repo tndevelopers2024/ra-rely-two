@@ -3,60 +3,45 @@ import { Article } from './types';
 export const article: Article = {
   slug: 'outsource-accounts-payable',
   title: 'When should a growing business outsource accounts payable?',
-  summary: 'A strategic guide for Australian SMEs on identifying the right inflection point to outsource accounts payable, eliminate manual data entry, mitigate invoice fraud, and improve supplier goodwill.',
+  summary: "How to recognise when accounts payable needs more support, compare delivery options, and retain control over supplier payments.",
   category: 'Accounts Payable',
-  readTime: '7 min read',
+  readTime: "3 min read",
   date: '28 August 2026',
   author: {
-    name: 'Roger M',
+    name: 'Rely Advisory Group',
     role: 'Principal Consultant',
     organisation: 'Rely Advisory Group',
   },
   tags: ['Accounts Payable', 'Cash Flow', 'ATO Compliance', 'SME Growth', 'Internal Controls'],
   takeaways: [
-    'As Australian SMEs expand beyond $2M turnover, manual accounts payable (AP) transforms from a routine clerical task into a high-risk operational bottleneck.',
-    'Outsourcing AP introduces institutional segregation of duties, protecting businesses from Business Email Compromise (BEC) and unauthorised payment tampering.',
-    'Digital OCR capture and automated workflows ensure timely BAS preparation, exact GST claiming, and strict Single Touch Payroll / superannuation alignment.',
-    'Australian payment rails (PayID, NPP, BPay, and secure ABA batches) streamline supplier settlements while preserving key supplier credit relationships.'
-  ],
+    "Use transaction volume, approval delays and staff capacity to assess your needs; turnover alone is not a reliable threshold.",
+    "Outsourcing can improve consistency, but the business still needs clear approval responsibilities and payment controls.",
+    "Keep supplier verification, GST review and final bank authorisation separate from routine invoice processing."
+],
   content: `
-    <h2>Executive Summary</h2>
-    <p>For growing Australian businesses, accounts payable (AP) often transitions from a manageable weekly task to a resource-draining bottleneck. Recognising when to outsource AP can prevent duplicate payments, ensure ATO compliance, and free up your team to focus on revenue-generating commercial growth. This article explores the tipping points for outsourcing and the tangible benefits it brings to SMEs turning over $2M to $50M.</p>
-    
-    <h2>The Tipping Point: Signs You Need to Outsource AP</h2>
-    <p>As your transaction volume increases, internal processes that once worked can start to break down. Consider outsourcing if you are experiencing:</p>
-    <ul>
-      <li><strong>Late Payments and Missed Discounts:</strong> Missing supplier payment terms damages credit terms and forfeits early-payment settlement discounts, costing thousands annually.</li>
-      <li><strong>Data Entry Errors:</strong> Manual entry into Xero, MYOB, or QBO often leads to duplicate payments or incorrect GST coding, complicating your quarterly Business Activity Statement (BAS) lodgements and triggering ATO review queries.</li>
-      <li><strong>Fraud and Security Risks:</strong> Without proper segregation of duties, internal AP processes are vulnerable. Outsourced providers implement strict controls around modern Australian payment rails like PayID, the New Payments Platform (NPP), and BECS direct entry.</li>
-      <li><strong>Executive and Staff Burnout:</strong> If your finance manager or managing director is spending days chasing manual approvals rather than delivering strategic commercial analysis, your AP function is an operational drag.</li>
-    </ul>
-
-    <h2>Core Analysis: The Cost of In-House vs. Outsourced AP</h2>
-    <h3>Scenario A: The Strained Internal Team</h3>
-    <p>A mid-sized Australian logistics company ($10M turnover) relies on one internal bookkeeper and the managing director for AP. The director spends four hours every week reviewing paper invoices, resolving supplier discrepancies, and setting up ABA files in the bank portal. Errors in GST claiming lead to a costly ATO audit. The hidden cost of the director's distracted time far outweighs the salary of the bookkeeper.</p>
-    
-    <h3>Scenario B: The Streamlined Outsourced Model</h3>
-    <p>The same company partners with Rely Advisory Group. Invoices are digitally captured using optical character recognition (OCR) and routed for approval via a secure cloud portal integrated directly with Xero. The director approves a single, verified batch payment once a week on their phone with full audit trails. Supplier relationships improve, and the business saves over $30,000 annually in time and software subscriptions, ensuring strict compliance with STP Phase 2 and Superannuation Guarantee obligations.</p>
-
-    <h2>Practical Checklist: Evaluating Your AP Function</h2>
-    <ul>
-      <li>Are invoices processed and paid consistently within standard trading terms?</li>
-      <li>Do you have a clear, multi-step digital approval workflow based on spending thresholds?</li>
-      <li>Is your AP system integrated directly with your cloud accounting software?</li>
-      <li>Are you leveraging automated Australian payment methods (BPay, PayID, NPP) efficiently?</li>
-      <li>Is there a mandatory callback protocol for any supplier requesting bank detail alterations?</li>
-    </ul>
-
-    <h2>Red Flags to Watch Out For</h2>
-    <ul>
-      <li>Regularly requesting payment extensions from key trade suppliers.</li>
-      <li>Frequent discrepancies between supplier monthly statements and your internal accounts ledger.</li>
-      <li>Inability to accurately forecast short-term cash flow due to AP backlogs and unprocessed invoices.</li>
-    </ul>
-
-    <h2>Next Steps & Call to Action</h2>
-    <p>Outsourcing your accounts payable isn't just about saving administrative hours; it's about reducing cyber risk, tightening cash controls, and gaining operational clarity. If your AP process is holding your business back, it's time to explore professional outsourcing.</p>
-    <p><strong>Ready to streamline your financial operations?</strong> Contact Roger M and the team at Rely Advisory Group today to discuss how our tailored accounts payable solutions can support your business growth.</p>
+<h2>When accounts payable needs more support</h2>
+<p>Accounts payable becomes harder to manage when invoice volumes grow faster than the team’s capacity. The practical question is whether your current process can capture invoices, resolve queries and pay suppliers on time without relying on one person’s memory.</p>
+<p>For Australian businesses, a reliable process also makes it easier to retain tax invoices, reconcile supplier balances and prepare information for the registered tax or BAS practitioner.</p>
+<h2>Signs the current process is under strain</h2>
+<ul>
+<li><strong>Invoices arrive through several channels:</strong> Staff cannot tell which invoices have been recorded, approved or paid.</li>
+<li><strong>Approvals stall:</strong> Suppliers chase payments while managers spend time searching email threads.</li>
+<li><strong>Exceptions repeat:</strong> Duplicate invoices, missing purchase orders and disputed charges take up most of the pay run.</li>
+<li><strong>There is no backup:</strong> Leave or staff turnover interrupts payment preparation.</li>
+</ul>
+<h2>Compare the full cost of each option</h2>
+<p>Compare an internal hire, improved software and outsourced support using the same scope. Include invoice capture, exception handling, reconciliations, reporting, management time and software costs. Ask what is included in the fee and what changes when transaction volumes increase.</p>
+<p>A provider should explain how invoices are checked, who can change supplier details, how information is shared and how work is covered during absences. Agree on measurable service levels rather than relying on promised savings.</p>
+<h2>Keep payment control with your business</h2>
+<ul>
+<li>Separate invoice entry, approval and final payment release wherever practical.</li>
+<li>Verify supplier bank-detail changes using a previously established contact number.</li>
+<li>Set written approval limits and maintain an audit trail.</li>
+<li>Have an authorised person review the payment batch in the bank portal before release.</li>
+<li>Refer uncertain GST treatments to your registered practitioner; automation does not establish tax entitlement.</li>
+</ul>
+<h2>A practical first step</h2>
+<p>Review one month of invoices. Record the time spent, number of overdue approvals, recurring errors and unresolved supplier queries. This gives you a baseline for deciding whether to improve the internal workflow or seek additional support.</p>
+<p>Start with a clearly defined process and review the results before expanding the arrangement.</p>
   `,
 };

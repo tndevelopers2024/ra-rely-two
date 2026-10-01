@@ -1,7 +1,8 @@
 'use client';
 
+import { usePrefersReducedMotion } from '@/lib/animations';
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface MarqueeProps {
   items: string[];
@@ -16,7 +17,7 @@ export const Marquee: React.FC<MarqueeProps> = ({
   speed = 35,
   className = '',
 }) => {
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = usePrefersReducedMotion();
 
   // Build the content string with separators
   const content = items.map((item) => (

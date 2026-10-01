@@ -74,8 +74,8 @@ export default function ContactPage() {
                         <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">contact@relyadvisory.com.au</a>
                       </div>
                       <div>
-                        <span className="text-xs text-charcoal">Direct / Roger M: </span>
-                        <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">rogerm@relyadvisory.com.au</a>
+                        <span className="text-xs text-charcoal">Direct Advisory: </span>
+                        <a href="mailto:advisory@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">advisory@relyadvisory.com.au</a>
                       </div>
                     </div>
                   </div>

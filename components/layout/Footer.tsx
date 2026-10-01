@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Logo } from "@/components/ui/Logo";
 import {
   Shield,
@@ -20,7 +19,6 @@ import {
   Users,
   CalendarCheck,
 } from "lucide-react";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { WordReveal } from "@/components/ui/WordReveal";
 
 const footerSolutions = [
@@ -119,15 +117,10 @@ export const Footer: React.FC = () => {
       <div className="absolute -top-32 right-0 w-[32rem] h-[32rem] rounded-full bg-[radial-gradient(circle,rgba(196,163,90,0.10)_0%,transparent_65%)] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-12">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-          variants={staggerContainer}
-        >
+        <div>
           {/* ---- 1. The Rely Promise + booking CTA ---- */}
-          <motion.div
-            variants={fadeInUp}
+          <div
+
             className="bg-rely-navy-dark/60 border border-advisory-gold/20 p-6 sm:p-8 rounded-3xl mb-10 backdrop-blur-sm"
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -159,11 +152,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* ---- 2. Assurance strip ---- */}
-          <motion.ul
-            variants={fadeInUp}
+          <ul
+
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12"
           >
             {assurances.map((item) => {
@@ -187,12 +180,12 @@ export const Footer: React.FC = () => {
                 </li>
               );
             })}
-          </motion.ul>
+          </ul>
 
           {/* ---- 3. Main footer grid ---- */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 pb-12 border-b border-white/10">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:gap-12 pb-12 border-b border-white/10">
             {/* Brand, contact & newsletter */}
-            <motion.div variants={fadeInUp} className="lg:col-span-2 space-y-5">
+            <div className="min-w-0 space-y-5">
               <Logo variant="light" />
               <p className="text-white/65 text-sm max-w-sm leading-relaxed">
                 Better finance operations. Clearer business decisions. Practical
@@ -216,9 +209,9 @@ export const Footer: React.FC = () => {
                       </a>
                     </div>
                     <div className="mt-2">
-                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Direct / Roger M</span>
-                      <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
-                        rogerm@relyadvisory.com.au
+                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Direct Advisory</span>
+                      <a href="mailto:advisory@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
+                        advisory@relyadvisory.com.au
                       </a>
                     </div>
                   </div>
@@ -271,100 +264,102 @@ export const Footer: React.FC = () => {
                   No sales sequences. Delivery endpoint pending connection.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Solutions */}
-            <motion.div variants={fadeInUp}>
-              <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-5">
-                Solutions
-              </h3>
-              <ul className="space-y-3 text-sm">
-                {footerSolutions.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-advisory-gold transition-colors duration-200 inline-flex items-center gap-1 group"
-                    >
-                      <span>{link.name}</span>
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Company */}
-            <motion.div variants={fadeInUp}>
-              <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-5">
-                Company
-              </h3>
-              <ul className="space-y-3 text-sm">
-                {footerCompany.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-advisory-gold transition-colors duration-200 inline-flex items-center gap-1 group"
-                    >
-                      <span>{link.name}</span>
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Resources */}
-            <motion.div variants={fadeInUp}>
-              <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-5">
-                Resources
-              </h3>
-              <ul className="space-y-3 text-sm">
-                {footerResources.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-advisory-gold transition-colors duration-200 inline-flex items-center gap-1 group"
-                    >
-                      <span>{link.name}</span>
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Get Started */}
-            <motion.div variants={fadeInUp}>
-              <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-5">
-                Get Started
-              </h3>
-              <ul className="space-y-3 text-sm">
-                {footerGetStarted.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-advisory-gold transition-colors duration-200 inline-flex items-center gap-1 group"
-                    >
-                      <span>{link.name}</span>
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/65">
-                <span className="mb-1 block font-semibold text-advisory-gold">
-                  Collaborative Approach
-                </span>
-                We complement your existing accountant and internal team without
-                replacing them.
+            <div className="grid min-w-0 content-start items-start grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 xl:grid-cols-4">
+              {/* Solutions */}
+              <div className="min-w-0">
+                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                  Solutions
+                </h3>
+                <ul className="space-y-3 text-sm">
+                  {footerSolutions.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                      >
+                        <span>{link.name}</span>
+                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </motion.div>
+
+              {/* Company */}
+              <div className="min-w-0">
+                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                  Company
+                </h3>
+                <ul className="space-y-3 text-sm">
+                  {footerCompany.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                      >
+                        <span>{link.name}</span>
+                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Resources */}
+              <div className="min-w-0">
+                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                  Resources
+                </h3>
+                <ul className="space-y-3 text-sm">
+                  {footerResources.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                      >
+                        <span>{link.name}</span>
+                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Get Started */}
+              <div className="min-w-0">
+                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                  Get Started
+                </h3>
+                <ul className="space-y-3 text-sm">
+                  {footerGetStarted.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                      >
+                        <span>{link.name}</span>
+                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+              <div className="sm:col-span-2 xl:col-span-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 text-xs leading-relaxed text-white/65">
+                  <span className="mb-1 block font-semibold text-advisory-gold">
+                    Collaborative Approach
+                  </span>
+                  We complement your existing accountant and internal team without
+                  replacing them.
+                </div>
+            </div>
           </div>
 
           {/* ---- 4. Service coverage pills ---- */}
-          <motion.div
-            variants={fadeInUp}
+          <div
+
             className="py-8 border-b border-white/10"
           >
             <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
@@ -380,11 +375,11 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* ---- 5. Disclaimer, legal & copyright ---- */}
-          <motion.div
-            variants={fadeInUp}
+          <div
+
             className="pt-8 space-y-6 text-xs text-white/45"
           >
             <p className="leading-relaxed">
@@ -426,8 +421,8 @@ export const Footer: React.FC = () => {
                 Back to top
               </button>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -1,7 +1,8 @@
 'use client';
 
+import { usePrefersReducedMotion } from '@/lib/animations';
 import React, { useRef } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -77,7 +78,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
   motif = 'advisory',
   className,
 }) => {
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = usePrefersReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const isCenter = align === 'center';
   const motifSrc = MOTIF_SRC[motif] ?? MOTIF_SRC.advisory;

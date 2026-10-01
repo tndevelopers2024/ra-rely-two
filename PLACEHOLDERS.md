@@ -5,7 +5,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 1. Contact Details & Business Registration
-- [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `rogerm@relyadvisory.com.au` (Direct / Roger M) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
+- [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `advisory@relyadvisory.com.au` (Direct Advisory) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
 - [x] **Telephone Number:** Updated to `0433 250 700` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
 - [x] **Physical Address / Office:** Updated to `6 Welford Circuit, North Kellyville NSW 2155` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
 - [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). (Removed unverified placeholder from footer; re-add when verified).

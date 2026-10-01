@@ -1,7 +1,8 @@
 'use client';
 
+import { usePrefersReducedMotion } from '@/lib/animations';
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 /**
  * Floating "chat on WhatsApp" action, pinned bottom-right on every page.
@@ -18,7 +19,7 @@ const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
 )}`;
 
 export const WhatsAppButton: React.FC = () => {
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = usePrefersReducedMotion();
 
   return (
     <motion.a
