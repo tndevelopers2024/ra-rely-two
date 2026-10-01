@@ -3,9 +3,6 @@ import { Article } from './types';
 import { article as outsourceAccountsPayable } from './outsource-accounts-payable';
 import { article as sevenSignsReceivables } from './seven-signs-receivables-weakening-cash-flow';
 import { article as bookkeeperAccountant } from './bookkeeper-accountant-finance-operations-partner';
-import { article as reduceSpreadsheet } from './reduce-spreadsheet-dependence-finance-operations';
-import { article as monthlyManagement } from './monthly-management-report-inclusions';
-import { article as accountingFirms } from './accounting-firms-extend-operational-support';
 import { article as practicalFramework } from './practical-framework-documenting-finance-processes';
 import { article as fiveFinancialDashboards } from './five-financial-dashboards-sme-financial-visibility';
 import { article as navigatingSuper } from './navigating-superannuation-guarantee-payday-super-compliance';
@@ -23,9 +20,6 @@ export const articles: Article[] = [
   outsourceAccountsPayable,
   sevenSignsReceivables,
   bookkeeperAccountant,
-  reduceSpreadsheet,
-  monthlyManagement,
-  accountingFirms,
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
