@@ -56,23 +56,9 @@ export const InsightsExplorer: React.FC<InsightsExplorerProps> = ({ articles }) 
                   </h3>
 
                   {/* Summary Excerpt */}
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6 line-clamp-3">
                     {art.summary}
                   </p>
-
-                  {/* Tags */}
-                  {art.tags && art.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 mb-5">
-                      {art.tags.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-flex items-center text-[10px] text-gray-600 bg-cloud-grey px-2 py-0.5 rounded font-mono"
-                        >
-                          #{tag.replace(/\s+/g, '')}
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </div>
 
                 {/* Card Footer: Author & Link */}
