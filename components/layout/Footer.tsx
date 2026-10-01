@@ -116,13 +116,10 @@ export const Footer: React.FC = () => {
       {/* Ambient gold glow anchoring the top-right corner */}
       <div className="absolute -top-32 right-0 w-[32rem] h-[32rem] rounded-full bg-[radial-gradient(circle,rgba(196,163,90,0.10)_0%,transparent_65%)] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-12">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-8">
         <div>
           {/* ---- 1. The Rely Promise + booking CTA ---- */}
-          <div
-
-            className="bg-rely-navy-dark/60 border border-advisory-gold/20 p-6 sm:p-8 rounded-3xl mb-10 backdrop-blur-sm"
-          >
+          <div className="bg-rely-navy-dark/60 border border-advisory-gold/20 p-6 sm:p-8 rounded-3xl mb-8 backdrop-blur-sm">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-advisory-gold/30 bg-advisory-gold/10 px-4 py-1.5 text-advisory-gold font-heading text-[11px] uppercase tracking-widest font-semibold mb-3">
@@ -155,10 +152,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* ---- 2. Assurance strip ---- */}
-          <ul
-
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12"
-          >
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
             {assurances.map((item) => {
               const Icon = item.icon;
               return (
@@ -183,8 +177,8 @@ export const Footer: React.FC = () => {
           </ul>
 
           {/* ---- 3. Main footer grid ---- */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:gap-12 pb-12 border-b border-white/10">
-            {/* Brand, contact & newsletter */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:gap-12 pb-8 border-b border-white/10">
+            {/* Brand, contact */}
             <div className="min-w-0 space-y-5">
               <Logo variant="light" />
               <p className="text-white/65 text-sm max-w-sm leading-relaxed">
@@ -231,137 +225,138 @@ export const Footer: React.FC = () => {
                   <span>Enquiries answered within one business day</span>
                 </li>
               </ul>
-
-              {/* Newsletter — pill input + pill submit */}
-              <div className="pt-2">
-                <label
-                  htmlFor="footer-newsletter"
-                  className="block font-heading text-[11px] uppercase tracking-widest font-semibold text-advisory-gold mb-2.5"
-                >
-                  Finance Operations Notes
-                </label>
-                <form
-                  className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1.5 focus-within:border-advisory-gold/60 transition-colors"
-                  onSubmit={(event) => event.preventDefault()}
-                >
-                  <input
-                    id="footer-newsletter"
-                    type="email"
-                    required
-                    placeholder="you@company.com.au"
-                    className="min-w-0 flex-1 bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/35 outline-none"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-advisory-gold px-4 py-2 font-heading text-xs font-semibold text-rely-navy transition-colors hover:bg-advisory-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                  >
-                    <Send className="h-3.5 w-3.5" />
-                    Join
-                  </button>
-                </form>
-                <p className="mt-2 text-[11px] leading-relaxed text-white/40">
-                  Occasional practical notes on AP, receivables and reporting.
-                  No sales sequences. Delivery endpoint pending connection.
-                </p>
-              </div>
             </div>
 
-            <div className="grid min-w-0 content-start items-start grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 xl:grid-cols-4">
-              {/* Solutions */}
-              <div className="min-w-0">
-                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
-                  Solutions
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  {footerSolutions.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
-                      >
-                        <span>{link.name}</span>
-                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            <div className="min-w-0 flex flex-col gap-10">
+              <div className="grid content-start items-start grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 xl:grid-cols-4">
+                {/* Solutions */}
+                <div className="min-w-0">
+                  <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                    Solutions
+                  </h3>
+                  <ul className="space-y-3 text-sm">
+                    {footerSolutions.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                        >
+                          <span>{link.name}</span>
+                          <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Company */}
+                <div className="min-w-0">
+                  <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                    Company
+                  </h3>
+                  <ul className="space-y-3 text-sm">
+                    {footerCompany.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                        >
+                          <span>{link.name}</span>
+                          <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Resources */}
+                <div className="min-w-0">
+                  <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                    Resources
+                  </h3>
+                  <ul className="space-y-3 text-sm">
+                    {footerResources.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                        >
+                          <span>{link.name}</span>
+                          <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Get Started */}
+                <div className="min-w-0">
+                  <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
+                    Get Started
+                  </h3>
+                  <ul className="space-y-3 text-sm">
+                    {footerGetStarted.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
+                        >
+                          <span>{link.name}</span>
+                          <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              {/* Company */}
-              <div className="min-w-0">
-                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
-                  Company
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  {footerCompany.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
-                      >
-                        <span>{link.name}</span>
-                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-auto">
+                {/* Newsletter — pill input + pill submit */}
+                <div>
+                  <label
+                    htmlFor="footer-newsletter"
+                    className="block font-heading text-[11px] uppercase tracking-widest font-semibold text-advisory-gold mb-2.5"
+                  >
+                    Finance Operations Notes
+                  </label>
+                  <form
+                    className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1.5 focus-within:border-advisory-gold/60 transition-colors"
+                    onSubmit={(event) => event.preventDefault()}
+                  >
+                    <input
+                      id="footer-newsletter"
+                      type="email"
+                      required
+                      placeholder="you@company.com.au"
+                      className="min-w-0 flex-1 bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/35 outline-none"
+                    />
+                    <button
+                      type="submit"
+                      className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-advisory-gold px-4 py-2 font-heading text-xs font-semibold text-rely-navy transition-colors hover:bg-advisory-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    >
+                      <Send className="h-3.5 w-3.5" />
+                      Join
+                    </button>
+                  </form>
+                  <p className="mt-2 text-[11px] leading-relaxed text-white/40">
+                    Occasional practical notes on AP, receivables and reporting.
+                    No sales sequences. Delivery endpoint pending connection.
+                  </p>
+                </div>
 
-              {/* Resources */}
-              <div className="min-w-0">
-                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
-                  Resources
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  {footerResources.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
-                      >
-                        <span>{link.name}</span>
-                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Get Started */}
-              <div className="min-w-0">
-                <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
-                  Get Started
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  {footerGetStarted.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="relative block w-fit max-w-full pr-4 text-white/70 leading-relaxed hover:text-advisory-gold transition-colors duration-200 group"
-                      >
-                        <span>{link.name}</span>
-                        <ArrowRight aria-hidden="true" className="absolute right-0 top-1 h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-advisory-gold" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-
-              </div>
-              <div className="sm:col-span-2 xl:col-span-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 text-xs leading-relaxed text-white/65">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 text-xs leading-relaxed text-white/65">
                   <span className="mb-1 block font-semibold text-advisory-gold">
                     Collaborative Approach
                   </span>
                   We complement your existing accountant and internal team without
                   replacing them.
                 </div>
+              </div>
             </div>
           </div>
 
           {/* ---- 4. Service coverage pills ---- */}
-          <div
-
-            className="py-8 border-b border-white/10"
-          >
+          <div className="py-6 border-b border-white/10">
             <h3 className="text-advisory-gold font-heading text-xs uppercase tracking-widest font-semibold mb-4">
               Where we work
             </h3>
@@ -378,10 +373,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* ---- 5. Disclaimer, legal & copyright ---- */}
-          <div
-
-            className="pt-8 space-y-6 text-xs text-white/45"
-          >
+          <div className="pt-6 space-y-6 text-xs text-white/45">
             <p className="leading-relaxed">
               <strong className="font-semibold text-white/65">
                 General information only:
