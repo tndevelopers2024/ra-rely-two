@@ -40,11 +40,26 @@ export default function HomePage() {
       'Finance operations, accounts payable, accounts receivable, finance process improvement and management reporting for businesses across Australia.',
     url: 'https://relyadvisory.com.au',
     logo: 'https://relyadvisory.com.au/logo.svg',
-    telephone: '[approved business number]',
+    email: 'contact@relyadvisory.com.au',
+    telephone: '0433 250 700',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        email: 'contact@relyadvisory.com.au',
+        contactType: 'customer support',
+      },
+      {
+        '@type': 'ContactPoint',
+        email: 'rogerm@relyadvisory.com.au',
+        contactType: 'direct contact',
+      }
+    ],
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Sydney',
+      streetAddress: '6 Welford Circuit',
+      addressLocality: 'North Kellyville',
       addressRegion: 'NSW',
+      postalCode: '2155',
       addressCountry: 'AU',
     },
     areaServed: {

@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import { Button } from '@/components/ui/Button';
-import { Mail, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, Clock, ShieldCheck, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Rely Advisory Group',
@@ -17,12 +17,13 @@ export default function ContactPage() {
         eyebrow="CONTACT RELY"
         title="Let's discuss what is slowing your finance operation down"
         description="Tell us briefly what you are trying to improve. We will respond with the most appropriate next step."
+        className="pb-8 sm:pb-10 lg:pb-12"
       />
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 my-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left Column: Contact info */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-warm-ivory p-6 rounded-2xl border border-advisory-gold/40 space-y-4">
@@ -33,8 +34,16 @@ export default function ContactPage() {
                   <Mail className="w-4 h-4 text-advisory-gold shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold text-rely-navy">Email</div>
-                    <span className="font-mono text-xs">hello@[approved-domain].com.au</span>
-                    <span className="text-[10px] bg-advisory-gold/20 text-rely-navy px-1.5 py-0.5 rounded ml-2">Placeholder</span>
+                    <div className="space-y-1 mt-1">
+                      <div>
+                        <span className="text-xs text-charcoal">General Enquiries: </span>
+                        <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">contact@relyadvisory.com.au</a>
+                      </div>
+                      <div>
+                        <span className="text-xs text-charcoal">Direct / Roger M: </span>
+                        <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">rogerm@relyadvisory.com.au</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -42,7 +51,15 @@ export default function ContactPage() {
                   <MapPin className="w-4 h-4 text-advisory-gold shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold text-rely-navy">Location</div>
-                    <span>Sydney, NSW. Services available remotely across Australia.</span>
+                    <span className="text-sm">6 Welford Circuit, North Kellyville NSW 2155</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Phone className="w-4 h-4 text-advisory-gold shrink-0 mt-1" />
+                  <div>
+                    <div className="font-semibold text-rely-navy">Phone</div>
+                    <a href="tel:0433250700" className="text-sm hover:text-advisory-gold transition-colors">0433 250 700</a>
                   </div>
                 </div>
 

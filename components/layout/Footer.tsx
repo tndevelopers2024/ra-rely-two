@@ -205,25 +205,30 @@ export const Footer: React.FC = () => {
               <ul className="space-y-3 text-xs text-white/60">
                 <li className="flex items-start gap-2.5">
                   <MapPin className="w-3.5 h-3.5 text-advisory-gold shrink-0 mt-0.5" />
-                  <span>Sydney, NSW — delivered remotely across Australia</span>
+                  <span>6 Welford Circuit, North Kellyville NSW 2155</span>
                 </li>
-                <li className="flex items-center gap-2.5 flex-wrap">
-                  <Mail className="w-3.5 h-3.5 text-advisory-gold shrink-0" />
-                  <span className="font-mono text-white/75">
-                    hello@[approved-domain].com.au
-                  </span>
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-advisory-gold-light border border-white/10">
-                    Placeholder
-                  </span>
+                <li className="flex items-start gap-2.5">
+                  <Mail className="w-3.5 h-3.5 text-advisory-gold shrink-0 mt-1" />
+                  <div className="flex flex-col space-y-1">
+                    <div>
+                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">General Enquiries</span>
+                      <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
+                        contact@relyadvisory.com.au
+                      </a>
+                    </div>
+                    <div className="mt-2">
+                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Direct / Roger M</span>
+                      <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
+                        rogerm@relyadvisory.com.au
+                      </a>
+                    </div>
+                  </div>
                 </li>
                 <li className="flex items-center gap-2.5 flex-wrap">
                   <Phone className="w-3.5 h-3.5 text-advisory-gold shrink-0" />
-                  <span className="font-mono text-white/75">
-                    [approved business number]
-                  </span>
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-advisory-gold-light border border-white/10">
-                    Placeholder
-                  </span>
+                  <a href="tel:0433250700" className="font-mono text-white/75 hover:text-white transition-colors">
+                    0433 250 700
+                  </a>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Clock className="w-3.5 h-3.5 text-advisory-gold shrink-0 mt-0.5" />
