@@ -13,7 +13,6 @@ import {
   MapPin,
   Clock,
   Phone,
-  Linkedin,
   Send,
   Lock,
   FileCheck2,
@@ -410,30 +409,13 @@ export const Footer: React.FC = () => {
                 <Mail className="h-3 w-3 text-advisory-gold" />
                 Contact
               </Link>
-              <a
-                href="https://www.linkedin.com/company/[approved-linkedin-handle]"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={chipClass}
-              >
-                <Linkedin className="h-3 w-3 text-advisory-gold" />
-                LinkedIn
-                <span className="text-[10px] text-advisory-gold-light">
-                  (placeholder)
-                </span>
-              </a>
             </div>
 
             <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-white/55 sm:flex-row sm:items-center sm:justify-between">
-              <div className="space-y-1">
-                <p suppressHydrationWarning>
-                  © {new Date().getFullYear()} Rely Advisory Group. All rights
-                  reserved.
-                </p>
-                <p className="text-white/35">
-                  ABN [ABN pending verification] · Registered in Australia
-                </p>
-              </div>
+              <p suppressHydrationWarning>
+                © {new Date().getFullYear()} Rely Advisory Group. All rights
+                reserved.
+              </p>
 
               <button
                 type="button"

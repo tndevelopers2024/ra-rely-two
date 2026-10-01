@@ -8,7 +8,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 - [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `rogerm@relyadvisory.com.au` (Direct / Roger M) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
 - [x] **Telephone Number:** Updated to `0433 250 700` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
 - [x] **Physical Address / Office:** Updated to `6 Welford Circuit, North Kellyville NSW 2155` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
-- [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). Rendered in the footer bottom bar as `ABN [ABN pending verification]`.
+- [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). (Removed unverified placeholder from footer; re-add when verified).
 - [x] **WhatsApp Business Number:** Set to `61433250700` (`components/ui/WhatsAppButton.tsx`, matching official phone `0433 250 700`).
 
 ---
@@ -32,7 +32,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 4. Footer — Social & Newsletter
-- [ ] **LinkedIn Company URL:** `https://www.linkedin.com/company/[approved-linkedin-handle]` (Found in `Footer.tsx`). Currently labelled "(placeholder)" in the UI — remove that label once the real URL is in place, or delete the link entirely if there is no company page.
+- [ ] **LinkedIn Company URL:** Add official company LinkedIn URL when approved. (Removed unverified placeholder link from `Footer.tsx`).
 - [ ] **Newsletter Delivery Endpoint:** The "Finance Operations Notes" signup form in `Footer.tsx` currently prevents submit and stores nothing. Connect it to the approved email platform (or remove the form) before launch, and confirm the consent wording meets the Spam Act 2003 requirements.
 
 ---
