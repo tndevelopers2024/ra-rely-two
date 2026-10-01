@@ -77,7 +77,7 @@ export const BenefitsList: React.FC = () => {
               Tailored to your systems
             </div>
             <p className="text-xs text-white/65 mt-1 leading-relaxed">
-              Xero, MYOB, QuickBooks, or Power BI.
+              Xero, MYOB, QuickBooks, or reporting tools.
             </p>
           </div>
           <div className="pt-3">

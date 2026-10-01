@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Which systems can Rely support?',
-    a: 'Initial platforms include Xero, MYOB, QuickBooks Online, Microsoft Excel, Microsoft 365, and Power BI.',
+    a: 'Initial platforms include Xero, MYOB, QuickBooks Online, Microsoft Excel, Microsoft 365, and reporting tools.',
   },
   {
     q: 'Will Rely make payments from our bank account?',

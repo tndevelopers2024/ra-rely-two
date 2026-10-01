@@ -14,7 +14,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 2. Founder Profile (`/about`)
-- [ ] **Founder Biography:** Professional summary covering background in customer insights, data analysis, executive reporting, finance operations improvement, and Power BI.
+- [ ] **Founder Biography:** Professional summary covering background in customer insights, data analysis, executive reporting, finance operations improvement, and reporting tools.
 - [ ] **Verified Qualifications & Memberships:** Add formal credentials only after verification.
 - [ ] **Founder Headshot:** Replace placeholder avatar with a high-resolution, professional portrait.
 
@@ -38,4 +38,4 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 5. Systems & Software Badges
-- [ ] Verify software partnerships/badges before display (Xero Partner, MYOB Certified, QuickBooks Online ProAdvisor, Power BI).
+- [ ] Verify software partnerships/badges before display (Xero Partner, MYOB Certified, QuickBooks Online ProAdvisor, reporting tools).

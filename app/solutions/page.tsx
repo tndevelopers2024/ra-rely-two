@@ -51,7 +51,7 @@ const solutions = [
       'Management packs, KPI dashboards and short-term cash flow visibility that explain what changed, why it matters and what to do next.',
     href: '/solutions/reporting-insights',
     icon: 'BarChart3',
-    points: ['Monthly management packs', 'Rolling cash flow forecast', 'Interactive Power BI dashboards', 'Commentary & actions'],
+    points: ['Monthly management packs', 'Rolling cash flow forecast', 'Interactive financial dashboards', 'Commentary & actions'],
   },
 ];
 
@@ -139,7 +139,7 @@ const faqs = [
   },
   {
     q: 'Which systems do you work in?',
-    a: 'Xero, MYOB and QuickBooks Online for the ledger, Microsoft 365 and Excel for working papers, and Power BI for dashboards. We work in your systems rather than moving you onto ours.',
+    a: 'Xero, MYOB and QuickBooks Online for the ledger, Microsoft 365 and Excel for working papers, and reporting tools for dashboards. We work in your systems rather than moving you onto ours.',
   },
   {
     q: 'How is pricing set?',

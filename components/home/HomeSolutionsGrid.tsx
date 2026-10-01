@@ -64,7 +64,7 @@ const solutionsData = [
     highlights: [
       'Monthly management packs',
       'Short-term cash flow forecasting',
-      'Interactive Power BI dashboards',
+      'Interactive financial dashboards',
       'Insight commentary & action plans',
     ],
   },

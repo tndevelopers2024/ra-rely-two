@@ -70,7 +70,7 @@ export default function HomePage() {
       'Accounts Payable Outsourcing',
       'Accounts Receivable Support',
       'Finance Process Improvement',
-      'Management Reporting and Power BI Dashboards',
+      'Management Reporting and Financial Dashboards',
     ],
     knowsAbout: [
       'Finance Operations',
@@ -97,7 +97,7 @@ export default function HomePage() {
           'Accounts Receivable',
           'Process Improvement',
           'Management Reporting',
-          'Power BI Dashboards',
+          'Financial Dashboards',
           'Cash Flow Visibility',
           'Finance Operations',
           'Debtor Management',

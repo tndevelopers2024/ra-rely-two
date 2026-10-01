@@ -3,7 +3,7 @@ import { Article } from './types';
 export const article: Article = {
   slug: 'reduce-spreadsheet-dependence-finance-operations',
   title: 'How to reduce spreadsheet dependence in finance operations',
-  summary: 'Manual Excel workbooks introduce severe version risks, human calculation errors, and data silos. Learn how Australian SMEs can modernize their finance operations by moving to automated, integrated cloud systems and Power BI reporting.',
+  summary: 'Manual Excel workbooks introduce severe version risks, human calculation errors, and data silos. Learn how Australian SMEs can modernize their finance operations by moving to automated, integrated cloud systems and dashboard reporting.',
   category: 'Systems & BI',
   readTime: '7 min read',
   date: '10 August 2026',
@@ -12,11 +12,11 @@ export const article: Article = {
     role: 'Principal Consultant',
     organisation: 'Rely Advisory Group',
   },
-  tags: ['Finance Automation', 'Excel Risk', 'Cloud Accounting', 'Power BI', 'Process Improvement'],
+  tags: ['Finance Automation', 'Excel Risk', 'Cloud Accounting', 'Reporting Tools', 'Process Improvement'],
   takeaways: [
     'Relying on manual spreadsheets as an Australian SME scales past $2M creates critical key-person vulnerabilities and hidden operational costs.',
     'Australian statutory compliance (STP Phase 2, Superannuation Guarantee, BAS) requires automated audit trails that spreadsheets cannot provide.',
-    'Consolidate around a single cloud source of truth (Xero, MYOB) paired with specialized operational tools (Dext, Power BI).',
+    'Consolidate around a single cloud source of truth (Xero, MYOB) paired with specialized operational tools (Dext, reporting tools).',
     'A phased migration replaces high-friction, error-prone manual spreadsheets first without disrupting daily operations.'
   ],
   content: `
@@ -40,8 +40,8 @@ export const article: Article = {
     <h3>2. Automate Transaction Capture & Payment Processing</h3>
     <p>Cease tracking supplier bills in Excel tables. Implement optical character recognition (OCR) tools (such as Dext or Hubdoc) to extract invoice line items automatically and push them directly into approval workflows. For receivables, leverage modern Australian payment rails like PayID, the New Payments Platform (NPP), and integrated payment gateways to reconcile payments automatically.</p>
 
-    <h3>3. Replace Spreadsheets with Dynamic Power BI Dashboards</h3>
-    <p>Executive reporting should not require four hours of manual Excel formatting every month. Connecting Microsoft Power BI directly to your accounting platform and operational databases delivers self-updating dashboards that refresh automatically. Leadership teams can filter by division, track customer concentration, and analyse gross margins with a single click.</p>
+    <h3>3. Replace Spreadsheets with Dynamic Financial Dashboards</h3>
+    <p>Executive reporting should not require four hours of manual Excel formatting every month. Connecting reporting tools to your accounting platform and operational databases can provide dashboards that refresh on a configured schedule. Leadership teams can filter by division, track customer concentration, and analyse gross margins with a single click.</p>
 
     <h3>4. Implement Dedicated Scenario-Based Forecasting</h3>
     <p>Cash flow modeling is the most common justification for complex workbooks. Modernise by adopting dedicated forecasting tools (like Fathom, Spotlight Reporting, or Float) that pull live ledger data to simulate multi-variable cash scenarios without formula breakdown risks.</p>
@@ -63,6 +63,6 @@ export const article: Article = {
 
     <h2>Unlocking Scalability Through Operational Modernisation</h2>
     <p>Reducing spreadsheet dependence is not about eliminating Excel entirely; it is about establishing robust, automated operational foundations that protect your data and scale smoothly with your revenue growth.</p>
-    <p><strong>Is your business weighed down by manual spreadsheets?</strong> Rely Advisory Group assists Australian SMEs in modernising financial systems, designing custom Power BI dashboards, and replacing manual workbooks with scalable, automated workflows. Reach out to <strong>Roger M</strong> today to explore a tailored finance operations review.</p>
+    <p><strong>Is your business weighed down by manual spreadsheets?</strong> Rely Advisory Group assists Australian SMEs in modernising financial systems, designing custom financial dashboards, and replacing manual workbooks with scalable, automated workflows. Reach out to <strong>Roger M</strong> today to explore a tailored finance operations review.</p>
   `,
 };

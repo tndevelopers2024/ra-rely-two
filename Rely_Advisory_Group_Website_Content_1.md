@@ -311,7 +311,7 @@ Rely reviews how work actually moves through your finance function, then redesig
 |---|---|
 | **Purpose** | Showcase the firm's management reporting and dashboard differentiation. |
 | **Suggested URL** | `/solutions/reporting-insights` |
-| **SEO title** | Management reporting and Power BI dashboards \| Rely |
+| **SEO title** | Management reporting and financial dashboards \| Rely |
 | **Meta description** | Turn financial and operational data into clear management reporting, practical dashboards and decision-focused business insight. |
 
 **Eyebrow:** REPORTING AND BUSINESS INSIGHTS
@@ -336,7 +336,7 @@ Rely converts operational and financial data into reporting that helps managemen
 | **Monthly management packs** | Consistent, concise reporting for owners and leadership teams. |
 | **Cash-flow visibility** | Practical short-term views of expected receipts, commitments and pressure points. |
 | **Debtor and creditor dashboards** | Ageing, concentration, trends, actions and exceptions. |
-| **Power BI dashboards** | Interactive reporting designed around management questions and accessible KPIs. |
+| **financial dashboards** | Interactive reporting designed around management questions and accessible KPIs. |
 | **Budget versus actual analysis** | Explain significant movements and focus attention on controllable drivers. |
 | **Insight commentary** | Convert data into implications, risks, opportunities and recommended actions. |
 
@@ -521,7 +521,7 @@ Plain-English guidance for business owners, finance teams and accounting partner
 5. What should be included in a monthly management report?
 6. How accounting firms can extend operational support without expanding headcount
 7. A practical framework for documenting finance processes
-8. Five Power BI dashboards that improve SME financial visibility
+8. Five financial dashboards that improve SME financial visibility
 
 ### Article page template
 1. Outcome-focused headline
@@ -572,7 +572,7 @@ Many businesses reach a point where informal processes, spreadsheets and fragmen
 
 ### Founder profile — *placeholder*
 > **Insert approved biography**
-> Include the founder's experience in customer insights, data analysis, executive reporting, finance operations improvement and Power BI. Add formal qualifications and memberships only when verified. Use a professional headshot and a concise personal statement about why Rely was established.
+> Include the founder's experience in customer insights, data analysis, executive reporting, finance operations improvement and reporting tools. Add formal qualifications and memberships only when verified. Use a professional headshot and a concise personal statement about why Rely was established.
 
 **CTA:** Meet with Rely
 
@@ -805,7 +805,7 @@ Yes. The preferred model is collaborative. Rely can manage agreed operational ac
 No. Many engagements begin with one priority process, such as accounts receivable or management reporting.
 
 **Which systems can Rely support?**
-The website should list only verified capability. Initial platforms may include Xero, MYOB, QuickBooks Online, Microsoft Excel, Microsoft 365 and Power BI.
+The website should list only verified capability. Initial platforms may include Xero, MYOB, QuickBooks Online, Microsoft Excel, Microsoft 365 and reporting tools.
 
 **Will Rely make payments from our bank account?**
 Rely may prepare payment information under the agreed process, but final approval and release should remain with authorised client personnel.

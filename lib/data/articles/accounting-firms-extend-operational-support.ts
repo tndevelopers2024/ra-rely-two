@@ -33,7 +33,7 @@ export const article: Article = {
     <p>Bespoke consulting is notoriously difficult to scale because it relies entirely on expensive partner time. In contrast, productised services bundle predefined deliverables into fixed-price monthly arrangements. For example, a <em>"Working Capital & Cash Flow Management Service"</em> might comprise:</p>
     <ul>
       <li>Initial cleanup and standardization of the client’s cloud chart of accounts.</li>
-      <li>Implementation of a 13-week rolling cash flow dashboard powered by tools like Fathom, Spotlight, or Power BI.</li>
+      <li>Implementation of a 13-week rolling cash flow dashboard powered by tools like Fathom or Spotlight.</li>
       <li>A scheduled 45-minute monthly executive video review with the client’s managing director to assess debtor trends and cash forecasts.</li>
     </ul>
     <p>Standardising the process allows modern software and support workflows to manage 80% of data preparation, reserving partner time strictly for high-value client advisory.</p>
@@ -42,7 +42,7 @@ export const article: Article = {
     <p>A practice cannot profitably deliver operational support if clients operate across disparate, unintegrated software. Standardise your client base on cloud engines (Xero, MYOB, or QBO) and enforce automated data capture tools (like Dext or Hubdoc) alongside modern Australian payment rails (PayID, NPP, automated BPay). Eliminating manual data entry frees up dozens of billable hours across your existing team.</p>
 
     <h3>3. White-Labelling Specialized Finance Operations Partners</h3>
-    <p>No accounting practice needs to employ full-time specialists for every operational discipline. Forward-thinking firms collaborate with independent finance operations specialists to provide outsourced accounts payable, debtor management, and Power BI implementations under a trusted, collaborative framework.</p>
+    <p>No accounting practice needs to employ full-time specialists for every operational discipline. Forward-thinking firms collaborate with independent finance operations specialists to provide outsourced accounts payable, debtor management, and reporting tool implementations under a trusted, collaborative framework.</p>
     <p>This hybrid model allows the accounting firm to maintain the primary trusted adviser relationship, earn recurring advisory fees, and deliver superior operational outcomes to clients without the burden of hiring, training, and managing internal operational staff.</p>
 
     <h2>Practical Implementation Roadmap for Practice Leaders</h2>
@@ -62,6 +62,6 @@ export const article: Article = {
 
     <h2>Elevating Your Firm’s Value Proposition</h2>
     <p>Expanding into operational finance is the most sustainable growth avenue available to modern Australian accounting firms. By pairing your firm’s tax and compliance excellence with automated systems and trusted operational partnerships, you build lasting, high-value client relationships.</p>
-    <p><strong>Looking to extend operational finance capability for your accounting practice?</strong> Rely Advisory Group partners collaboratively with Australian accounting firms to deliver seamless accounts payable, receivables management, and Power BI reporting for your valued clients. Speak with <strong>Roger M</strong> today to explore collaborative partnership models.</p>
+    <p><strong>Looking to extend operational finance capability for your accounting practice?</strong> Rely Advisory Group partners collaboratively with Australian accounting firms to deliver seamless accounts payable, receivables management, and dashboard reporting for your valued clients. Speak with <strong>Roger M</strong> today to explore collaborative partnership models.</p>
   `,
 };

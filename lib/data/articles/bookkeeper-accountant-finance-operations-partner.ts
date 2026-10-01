@@ -48,7 +48,7 @@ export const article: Article = {
       <li>Optimizing tech stacks and automating workflows (integrating OCR data capture, modern payment rails like PayID, NPP, and direct debits).</li>
       <li>Managing complex working capital, 13-week rolling cash flow forecasts, and operational scenario modeling.</li>
       <li>Implementing robust internal controls, segregation of duties, and managing risk (including PPSR security registrations).</li>
-      <li>Acting as a fractional CFO or finance director, delivering actionable management reporting and Power BI dashboards tailored to key business drivers.</li>
+      <li>Acting as a fractional CFO or finance director, delivering actionable management reporting and financial dashboards tailored to key business drivers.</li>
     </ul>
 
     <h2>Scenarios: What Does Your Business Need?</h2>

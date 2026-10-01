@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "accounts receivable support",
     "management reporting",
     "finance process improvement",
-    "Power BI dashboards",
+    "financial dashboards",
     "SME finance operations",
   ],
   authors: [{ name: "Rely Advisory Group" }],

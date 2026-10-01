@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/insights/five-power-bi-dashboards-sme-financial-visibility',
+        destination: '/insights/five-financial-dashboards-sme-financial-visibility',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

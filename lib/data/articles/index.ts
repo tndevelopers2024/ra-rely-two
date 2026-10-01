@@ -7,14 +7,14 @@ import { article as reduceSpreadsheet } from './reduce-spreadsheet-dependence-fi
 import { article as monthlyManagement } from './monthly-management-report-inclusions';
 import { article as accountingFirms } from './accounting-firms-extend-operational-support';
 import { article as practicalFramework } from './practical-framework-documenting-finance-processes';
-import { article as fivePowerBi } from './five-power-bi-dashboards-sme-financial-visibility';
+import { article as fiveFinancialDashboards } from './five-financial-dashboards-sme-financial-visibility';
 import { article as navigatingSuper } from './navigating-superannuation-guarantee-payday-super-compliance';
 import { article as privacyAct } from './privacy-act-reforms-australian-sme-finance-data-security';
 import { article as fairWork } from './fair-work-compliance-payroll-risk-audit-guide';
 import { article as workingCapital } from './working-capital-management-high-interest-rate-australia';
 
 export const articles: Article[] = [
-  fivePowerBi,
+  fiveFinancialDashboards,
   navigatingSuper,
   fairWork,
   practicalFramework,

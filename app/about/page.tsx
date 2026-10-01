@@ -75,7 +75,7 @@ export default function AboutPage() {
               </div>
             </div>
             <p className="text-sm text-charcoal leading-relaxed">
-              Experience in customer insights, data analysis, executive reporting, finance operations improvement, and Power BI. Verified formal qualifications, memberships, and a concise personal statement on why Rely was established will appear here before launch.
+              Experience in customer insights, data analysis, executive reporting, finance operations improvement, and reporting tools. Verified formal qualifications, memberships, and a concise personal statement on why Rely was established will appear here before launch.
             </p>
           </div>
         </div>

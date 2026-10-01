@@ -38,7 +38,7 @@ const navLinks = [
       {
         name: "Reporting & Insights",
         href: "/solutions/reporting-insights",
-        desc: "Management packs, KPI dashboards, and Power BI reporting.",
+        desc: "Management packs, KPI dashboards, and dashboard reporting.",
       },
     ],
   },

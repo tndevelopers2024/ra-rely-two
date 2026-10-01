@@ -12,7 +12,7 @@ import { CTASection } from '@/components/ui/CTASection';
 import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Management reporting and Power BI dashboards | Rely',
+  title: 'Management reporting and financial dashboards | Rely',
   description:
     'Monthly management packs, KPI dashboards, rolling cash flow forecasts and decision-focused commentary that explain what changed, why it matters and what to do next.',
 };
@@ -28,7 +28,7 @@ const build = [
     icon: 'LayoutDashboard',
     title: 'KPI dashboards',
     description:
-      'Interactive Power BI dashboards that let leaders explore the numbers themselves — by division, product, customer or job — without waiting for a report.',
+      'Interactive financial dashboards that let leaders explore the numbers themselves — by division, product, customer or job — without waiting for a report.',
   },
   {
     icon: 'Waves',
@@ -113,8 +113,8 @@ const faqs = [
     a: 'Compliance reporting confirms what happened for tax and statutory purposes, usually well after the period. Management reporting is faster, forward-looking and built around your decisions — margin by job, cash in 13 weeks, KPIs against target — with commentary that says what to do.',
   },
   {
-    q: 'Do we need Power BI licences?',
-    a: 'For interactive dashboards, yes — typically Power BI Pro per viewer, or a capacity licence. We will size this with you. The monthly pack itself is delivered as a document and needs no additional licensing.',
+    q: 'Do we need licences for reporting tools?',
+    a: 'Licensing depends on the reporting tools selected, the number of viewers, and how dashboards are shared. We will confirm the requirements with you. The monthly pack itself is delivered as a document and needs no additional licensing.',
   },
   {
     q: 'Our data is messy. Can you still build useful reporting?',
@@ -135,7 +135,7 @@ export default function ReportingInsightsPage() {
         title="Move from financial information to business action"
         description="Rely turns ledger and operational data into management reporting that explains what changed, why it matters and what should happen next — delivered on a schedule you can plan around."
         breadcrumbs={[{ name: 'Solutions', href: '/solutions' }, { name: 'Reporting & Insights' }]}
-        highlights={['Fifth-business-day pack', 'Interactive Power BI', 'Commentary, not just numbers']}
+        highlights={['Fifth-business-day pack', 'Interactive dashboards', 'Commentary, not just numbers']}
       />
 
       {/* ---- Why it matters ---- */}

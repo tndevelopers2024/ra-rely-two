@@ -11,7 +11,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Finance operations insights for Australian SMEs | Rely Advisory Group',
   description:
-    'Practical articles, frameworks and tools for Australian businesses covering cash flow, Power BI reporting, Fair Work compliance, Payday Super, and accounts operations.',
+    'Practical articles, frameworks and tools for Australian businesses covering cash flow, dashboard reporting, Fair Work compliance, Payday Super, and accounts operations.',
 };
 
 export default function InsightsPage() {
@@ -155,7 +155,7 @@ export default function InsightsPage() {
                 Articles & Operational Guides for Australian Businesses
               </h2>
               <p className="text-sm sm:text-base text-gray-600 mt-2 max-w-2xl leading-relaxed">
-                In-depth articles covering cash flow management, Power BI analytics, Australian regulatory updates (ATO, Fair Work, Privacy Act), and scalable finance operations.
+                In-depth articles covering cash flow management, financial analytics, Australian regulatory updates (ATO, Fair Work, Privacy Act), and scalable finance operations.
               </p>
             </div>
 

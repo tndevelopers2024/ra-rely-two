@@ -58,6 +58,6 @@ export const article: Article = {
 
     <h2>Transforming Reports into Strategic Clarity</h2>
     <p>A great management report does not produce more noise; it delivers actionable clarity. It equips founders, directors, and finance teams to make informed decisions that protect cash reserves and drive long-term enterprise value.</p>
-    <p><strong>Want to elevate your monthly management reporting?</strong> Rely Advisory Group specializes in developing executive management packs and interactive Power BI dashboards for Australian SMEs. Contact <strong>Roger M</strong> today to transform your financial reporting into a powerful strategic asset.</p>
+    <p><strong>Want to elevate your monthly management reporting?</strong> Rely Advisory Group specializes in developing executive management packs and interactive financial dashboards for Australian SMEs. Contact <strong>Roger M</strong> today to transform your financial reporting into a powerful strategic asset.</p>
   `,
 };
