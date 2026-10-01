@@ -5,7 +5,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 1. Contact Details & Business Registration
-- [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `advisory@relyadvisory.com.au` (Direct Advisory) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
+- [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `rogerm@relyadvisory.com.au` (Direct Contact) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
 - [x] **Telephone Number:** Updated to `0433 250 700` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
 - [x] **Physical Address / Office:** Updated to `6 Welford Circuit, North Kellyville NSW 2155` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
 - [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). (Removed unverified placeholder from footer; re-add when verified).
@@ -23,7 +23,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ## 3. Legal & Regulatory Documents
 - [ ] **Privacy Policy (`/privacy`):**
   - Replace `[insert date]` with actual policy publication/revision date.
-  - [x] Replaced `[privacy email]` with `contact@relyadvisory.com.au`.
+  - [x] Replaced `[privacy email]` with `contact@relyadvisory.com.au` and `rogerm@relyadvisory.com.au`.
   - Confirm any offshore data hosting or overseas delivery arrangements.
 - [ ] **Terms & Service Disclaimer (`/terms`):**
   - [x] Replaced `[insert Australian jurisdiction]` with `NSW`.

@@ -209,9 +209,9 @@ export const Footer: React.FC = () => {
                       </a>
                     </div>
                     <div className="mt-2">
-                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Direct Advisory</span>
-                      <a href="mailto:advisory@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
-                        advisory@relyadvisory.com.au
+                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Direct Contact</span>
+                      <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
+                        rogerm@relyadvisory.com.au
                       </a>
                     </div>
                   </div>

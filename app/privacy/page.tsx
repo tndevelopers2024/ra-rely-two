@@ -64,6 +64,10 @@ export default function PrivacyPage() {
               Privacy questions or complaints may be sent to{' '}
               <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-rely-navy hover:text-advisory-gold transition-colors font-semibold text-xs">
                 contact@relyadvisory.com.au
+              </a>{' '}
+              or directly to{' '}
+              <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-rely-navy hover:text-advisory-gold transition-colors font-semibold text-xs">
+                rogerm@relyadvisory.com.au
               </a>
               . Rely will respond within a reasonable period and explain available escalation pathways where applicable.
             </p>

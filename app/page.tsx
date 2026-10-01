@@ -50,7 +50,7 @@ export default function HomePage() {
       },
       {
         '@type': 'ContactPoint',
-        email: 'contact@relyadvisory.com.au',
+        email: 'rogerm@relyadvisory.com.au',
         contactType: 'direct contact',
       }
     ],
