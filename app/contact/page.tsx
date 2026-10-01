@@ -1,16 +1,50 @@
-import React from 'react';
-import type { Metadata } from 'next';
+'use client';
+
+import React, { useState } from 'react';
 import { PageHero } from '@/components/ui/PageHero';
 import { Button } from '@/components/ui/Button';
 import { Mail, MapPin, Clock, ShieldCheck, Phone } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Contact Rely Advisory Group',
-  description:
-    'Contact Rely Advisory Group about finance operations support, reporting, process improvement or accountant partnerships.',
-};
-
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus('idle');
+    setErrorMessage('');
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus('error');
+        setErrorMessage(result.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setStatus('error');
+      setErrorMessage('A network error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <PageHero
@@ -81,7 +115,24 @@ export default function ContactPage() {
 
           {/* Right Column: Contact form */}
           <div className="lg:col-span-7 bg-white p-8 rounded-2xl border border-cloud-grey-border shadow-subtle">
-            <form className="space-y-5">
+            {status === 'success' && (
+              <div className="mb-6 p-4 bg-green-50 text-green-800 rounded-lg border border-green-200">
+                Your message has been received. We will get back to you shortly.
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="mb-6 p-4 bg-red-50 text-red-800 rounded-lg border border-red-200">
+                {errorMessage}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Honeypot field - invisible to users */}
+              <div style={{ display: 'none' }} aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
@@ -89,6 +140,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
                     className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none"
                   />
@@ -99,6 +151,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
+                    name="business"
                     required
                     className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none"
                   />
@@ -112,6 +165,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none"
                   />
@@ -122,6 +176,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
                     className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none"
                   />
                 </div>
@@ -131,7 +186,7 @@ export default function ContactPage() {
                 <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                   Enquiry Type
                 </label>
-                <select className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none bg-white">
+                <select name="type" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none bg-white">
                   <option>General enquiry</option>
                   <option>Accounts Payable enquiry</option>
                   <option>Accounts Receivable enquiry</option>
@@ -146,6 +201,7 @@ export default function ContactPage() {
                   Message *
                 </label>
                 <textarea
+                  name="message"
                   rows={4}
                   required
                   placeholder="How can we assist you?"
@@ -153,8 +209,8 @@ export default function ContactPage() {
                 />
               </div>
 
-              <Button type="button" variant="primary" size="md" className="w-full justify-center">
-                Send Enquiry
+              <Button type="submit" disabled={isSubmitting} variant="primary" size="md" className="w-full justify-center">
+                {isSubmitting ? 'Sending...' : 'Send Enquiry'}
               </Button>
             </form>
           </div>
@@ -164,3 +220,4 @@ export default function ContactPage() {
     </>
   );
 }
+

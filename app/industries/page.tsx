@@ -20,7 +20,7 @@ export default function IndustriesPage() {
         description="Every industry has different billing cycles, supplier pressures and performance measures. Rely adapts the operating model and reporting to the realities of the client's business."
       />
 
-      <section className="py-16 sm:py-20 bg-white" aria-labelledby="industries-heading">
+      <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 bg-white" aria-labelledby="industries-heading">
         <h2 id="industries-heading" className="sr-only">
           Industries we support
         </h2>

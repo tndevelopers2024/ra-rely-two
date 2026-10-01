@@ -160,7 +160,7 @@ export default function SolutionsPage() {
       />
 
       {/* ---- The four services ---- */}
-      <SectionTransition className="py-16 sm:py-20 lg:py-24 bg-white" aria-labelledby="services-heading">
+      <SectionTransition className="pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24 bg-white" aria-labelledby="services-heading">
         <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="WHAT WE RUN"

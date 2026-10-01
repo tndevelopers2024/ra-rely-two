@@ -53,6 +53,7 @@ interface PageHeroProps {
   highlights?: string[];
   /** Which decorative illustration sits behind the banner. */
   motif?: HeroMotif;
+  className?: string;
 }
 
 const stagger = {
@@ -74,6 +75,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
   breadcrumbs,
   highlights,
   motif = 'advisory',
+  className,
 }) => {
   const shouldReduceMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
@@ -133,7 +135,10 @@ export const PageHero: React.FC<PageHeroProps> = ({
   return (
     <section
       ref={sectionRef}
-      className="relative pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24 overflow-hidden"
+      className={cn(
+        'relative pt-32 pb-8 sm:pt-36 sm:pb-10 lg:pt-40 lg:pb-12 overflow-hidden',
+        className
+      )}
     >
       {/* ---- Layered banner background ---- */}
       <div data-pagehero-bg className="absolute inset-0 -z-10 pointer-events-none">

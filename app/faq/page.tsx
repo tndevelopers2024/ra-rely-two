@@ -45,7 +45,7 @@ export default function FAQPage() {
         description="Everything you need to know about our service models, controls, security, and engagement pathways."
       />
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
 
 

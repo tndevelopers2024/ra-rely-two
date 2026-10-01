@@ -139,7 +139,7 @@ export default function ReportingInsightsPage() {
       />
 
       {/* ---- Why it matters ---- */}
-      <SectionTransition className="bg-white py-16 sm:py-20 lg:py-24">
+      <SectionTransition className="bg-white pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24">
         <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">

@@ -20,7 +20,7 @@ export default function ForAccountantsPage() {
         description="Rely works alongside accounting firms to provide practical AP, AR, reporting and process support, allowing accountants to remain focused on tax, compliance and higher-value advisory work."
       />
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
 
 

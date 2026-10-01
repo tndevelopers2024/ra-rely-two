@@ -426,7 +426,7 @@ export const Footer: React.FC = () => {
 
             <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-white/55 sm:flex-row sm:items-center sm:justify-between">
               <div className="space-y-1">
-                <p>
+                <p suppressHydrationWarning>
                   © {new Date().getFullYear()} Rely Advisory Group. All rights
                   reserved.
                 </p>

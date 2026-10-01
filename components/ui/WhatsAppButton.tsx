@@ -9,7 +9,7 @@ import { motion, useReducedMotion } from 'framer-motion';
  * PLACEHOLDER: replace WHATSAPP_NUMBER with the approved WhatsApp Business
  * number in full international format, digits only (e.g. 61XXXXXXXXX for AU).
  */
-const WHATSAPP_NUMBER = '61400000000';
+const WHATSAPP_NUMBER = '61433250700';
 const PREFILLED_MESSAGE =
   'Hi Rely Advisory Group, I would like to talk about finance operations support.';
 

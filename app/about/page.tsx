@@ -20,7 +20,7 @@ export default function AboutPage() {
         description="Rely Advisory Group was created to help growing businesses bring greater structure, visibility and commercial value to their day-to-day finance operations."
       />
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 bg-white">
         <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Values Grid */}
           <div className="mb-16">
@@ -68,9 +68,9 @@ export default function AboutPage() {
                 <User className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-lg text-rely-navy">Founder Profile</h3>
+                <h3 className="font-heading font-bold text-lg text-rely-navy">Roger M</h3>
                 <span className="text-xs font-mono bg-advisory-gold/20 text-rely-navy px-2 py-0.5 rounded">
-                  [PLACEHOLDER — Replace with approved founder biography]
+                  Founder & Engagement Lead
                 </span>
               </div>
             </div>

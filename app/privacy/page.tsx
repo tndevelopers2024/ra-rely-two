@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         description="Read how Rely Advisory Group handles personal information collected through the website."
       />
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
 

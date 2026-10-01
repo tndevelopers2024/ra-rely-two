@@ -5,11 +5,11 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 1. Contact Details & Business Registration
-- [ ] **Email Address:** `hello@[approved-domain].com.au` (Found in `Header.tsx`, `Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx`)
-- [ ] **Telephone Number:** `[approved business number]` (Found in `Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema)
-- [ ] **Physical Address / Office:** Sydney, NSW (Confirm exact address or specify remote availability)
+- [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `rogerm@relyadvisory.com.au` (Direct / Roger M) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
+- [x] **Telephone Number:** Updated to `0433 250 700` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
+- [x] **Physical Address / Office:** Updated to `6 Welford Circuit, North Kellyville NSW 2155` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
 - [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). Rendered in the footer bottom bar as `ABN [ABN pending verification]`.
-- [ ] **WhatsApp Business Number:** `WHATSAPP_NUMBER` constant in `components/ui/WhatsAppButton.tsx` is set to `61400000000` (placeholder). Replace with the approved WhatsApp Business number in full international format, digits only.
+- [x] **WhatsApp Business Number:** Set to `61433250700` (`components/ui/WhatsAppButton.tsx`, matching official phone `0433 250 700`).
 
 ---
 
@@ -23,10 +23,10 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ## 3. Legal & Regulatory Documents
 - [ ] **Privacy Policy (`/privacy`):**
   - Replace `[insert date]` with actual policy publication/revision date.
-  - Replace `[privacy email]` with the designated privacy officer/inbox.
+  - [x] Replaced `[privacy email]` with `contact@relyadvisory.com.au`.
   - Confirm any offshore data hosting or overseas delivery arrangements.
 - [ ] **Terms & Service Disclaimer (`/terms`):**
-  - Replace `[insert Australian jurisdiction]` with the approved state/territory (e.g. New South Wales).
+  - [x] Replaced `[insert Australian jurisdiction]` with `NSW`.
   - Verify registered tax/BAS practitioner disclaimers.
 
 ---
