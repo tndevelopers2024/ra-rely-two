@@ -3,11 +3,11 @@ import { articles, getArticleBySlug, getRelatedArticles } from '@/lib/data/artic
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { CTASection } from '@/components/ui/CTASection';
-import { ArrowLeft, ArrowRight, Clock, Calendar, CheckCircle2, Tag, BookOpen, ShieldCheck } from 'lucide-react';
-import { Reveal } from '@/components/ui/Reveal';
+import { ArrowLeft, ArrowRight, Clock, Calendar, BookOpen } from 'lucide-react';
+import styles from './article.module.css';
 
 type Props = {
-  params: Promise<{ slug: string }> | { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -49,167 +49,93 @@ export default async function ArticlePage({ params }: Props) {
 
   const relatedArticles = getRelatedArticles(article.slug, 3);
 
+  const sections: { id: string; title: string }[] = [];
+  const content = article.content.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_, attributes: string, title: string) => {
+    const id = `section-${sections.length + 1}`;
+    sections.push({ id, title: title.replace(/<[^>]+>/g, '') });
+    return `<h2${attributes} id="${id}">${title}</h2>`;
+  });
+
   return (
     <>
-      <article className="pt-32 pb-16 sm:pt-40 sm:pb-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Breadcrumb & Category */}
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-            <Link
-              href="/insights"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-rely-navy hover:text-advisory-gold transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Insights
-            </Link>
-
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full bg-advisory-gold/15 text-rely-navy border border-advisory-gold/30">
-                {article.category}
-              </span>
+      <article className={styles.article}>
+        <header className={styles.hero}>
+          <div className={styles.heroPattern} aria-hidden="true" />
+          <div className={styles.container}>
+            <Link href="/insights" className={styles.back}><ArrowLeft size={16} /> Back to Insights</Link>
+            <div className={styles.heroGrid}>
+              <div>
+                <div className={styles.eyebrow}><span /> {article.category} <span className={styles.eyebrowDivider}>/</span> Rely Insights</div>
+                <h1>{article.title}</h1>
+                <p className={styles.summary}>{article.summary}</p>
+                <div className={styles.metadata}>
+                  <span><Calendar size={15} /> {article.date}</span>
+                  <span><Clock size={15} /> {article.readTime}</span>
+                </div>
+              </div>
+              <div className={styles.heroAside}>
+                <BookOpen size={30} strokeWidth={1.2} />
+                <p>Perspective.<br />Clarity.<br /><em>Better decisions.</em></p>
+                <span>Practical guidance for<br />Australian businesses</span>
+              </div>
+            </div>
+            <div className={styles.authorStrip}>
+              <div className={styles.avatar}>{article.author.name.split(' ').map(name => name.charAt(0)).join('')}</div>
+              <div><strong>{article.author.name}</strong><span>{article.author.role} · {article.author.organisation || 'Rely Advisory Group'}</span></div>
+              <span className={styles.authorLabel}>THE ADVISORY PERSPECTIVE</span>
             </div>
           </div>
+        </header>
 
-          {/* Article Header */}
-          <header className="mb-10 pb-8 border-b border-cloud-grey-border">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-rely-navy mb-6 leading-tight">
-              {article.title}
-            </h1>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6 font-medium">
-              {article.summary}
-            </p>
-
-            {/* Author & Publication Metadata */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-cloud-grey">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-rely-navy text-advisory-gold font-bold flex items-center justify-center text-sm shadow-sm">
-                  {article.author.name.charAt(0)}
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-rely-navy">{article.author.name}</div>
-                  <div className="text-xs text-gray-500">
-                    {article.author.role} • {article.author.organisation || 'Rely Advisory Group'}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 text-xs text-gray-500 font-medium">
-                <div className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-advisory-gold" />
-                  <span>{article.date}</span>
-                </div>
-                <span>•</span>
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-advisory-gold" />
-                  <span>{article.readTime}</span>
-                </div>
-              </div>
-            </div>
-          </header>
-
-          {/* Executive Key Takeaways Callout Box */}
-          {article.takeaways && article.takeaways.length > 0 && (
-            <div className="mb-12 bg-warm-ivory/60 border-l-4 border-advisory-gold p-6 sm:p-7 rounded-r-2xl shadow-xs">
-              <div className="flex items-center gap-2 mb-3">
-                <ShieldCheck className="w-5 h-5 text-advisory-gold" />
-                <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-rely-navy m-0">
-                  Executive Takeaways for Australian Leadership
-                </h2>
-              </div>
-              <ul className="space-y-2.5 my-0 pl-0 list-none">
-                {article.takeaways.map((takeaway, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-sm text-gray-800 leading-relaxed">
-                    <CheckCircle2 className="w-4 h-4 text-advisory-gold shrink-0 mt-0.5" />
-                    <span>{takeaway}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Main Article Body */}
-          <div
-            className="prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-h2:text-2xl prose-h2:text-rely-navy prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:text-rely-navy prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-rely-navy prose-a:text-advisory-gold hover:prose-a:text-rely-navy max-w-none"
-            dangerouslySetInnerHTML={{ __html: article.content }}
-          />
-
-          {/* Tags */}
-          {article.tags && article.tags.length > 0 && (
-            <div className="mt-12 pt-6 border-t border-cloud-grey-border flex flex-wrap items-center gap-2">
-              <span className="text-xs font-semibold text-gray-500 flex items-center gap-1 mr-2">
-                <Tag className="w-3.5 h-3.5 text-advisory-gold" /> Topics:
-              </span>
-              {article.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs font-mono bg-cloud-grey text-gray-700 px-2.5 py-1 rounded-md"
-                >
-                  #{tag.replace(/\s+/g, '')}
-                </span>
+        <div className={`${styles.container} ${styles.readingLayout}`}>
+          <aside className={styles.sidebar}>
+            <nav aria-label="Article contents" className={styles.contents}>
+              <span className={styles.label}>IN THIS ARTICLE</span>
+              {sections.map((section, index) => (
+                <a key={section.id} href={`#${section.id}`}><span>{String(index + 1).padStart(2, '0')}</span>{section.title}</a>
               ))}
+            </nav>
+            <div className={styles.sidebarCta}>
+              <span className={styles.label}>FROM INSIGHT TO ACTION</span>
+              <h3>Make your next move a confident one.</h3>
+              <p>Talk through your finance operations with our team.</p>
+              <Link href="/book-a-review">Book a review <ArrowRight size={16} /></Link>
             </div>
-          )}
+          </aside>
 
-          {/* Regulatory Disclaimer */}
-          <div className="mt-10 p-5 bg-cloud-grey/60 rounded-xl text-xs text-gray-600 leading-relaxed border border-cloud-grey-border">
-            <strong>Australian General Advice Disclaimer:</strong> The information provided in this publication is for general operational guidance and educational purposes only. It does not constitute formal taxation, legal, or licensed financial product advice. Australian businesses should consult their registered Tax Agent, legal counsel, or Rely Advisory Group specialist to evaluate their specific circumstances.
+          <div className={styles.readingColumn}>
+            {!!article.takeaways?.length && (
+              <section className={styles.takeaways} aria-labelledby="takeaways-heading">
+                <div className={styles.takeawayHeader}><span className={styles.label}>THE ESSENTIALS</span><span>{article.takeaways.length} key insights</span></div>
+                <h2 id="takeaways-heading">At a glance</h2>
+                <ol>{article.takeaways.map((takeaway, index) => <li key={takeaway}><span>{String(index + 1).padStart(2, '0')}</span><p>{takeaway}</p></li>)}</ol>
+              </section>
+            )}
+            <div className={styles.body} dangerouslySetInnerHTML={{ __html: content }} />
+            {!!article.tags?.length && <div className={styles.tags}><span className={styles.label}>EXPLORE THE TOPICS</span><div>{article.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>}
+            <div className={styles.authorCard}>
+              <div className={styles.avatar}>{article.author.name.split(' ').map(name => name.charAt(0)).join('')}</div>
+              <div><span className={styles.label}>WRITTEN BY</span><h3>{article.author.name}</h3><p>{article.author.role} · {article.author.organisation || 'Rely Advisory Group'}</p></div>
+              <Link href="/contact" aria-label={`Contact ${article.author.name}`}><ArrowRight size={20} /></Link>
+            </div>
+            <p className={styles.disclaimer}><strong>Australian General Advice Disclaimer:</strong> The information provided in this publication is for general operational guidance and educational purposes only. It does not constitute formal taxation, legal, or licensed financial product advice. Australian businesses should consult their registered Tax Agent, legal counsel, or Rely Advisory Group specialist to evaluate their specific circumstances.</p>
           </div>
         </div>
 
-        {/* Related Articles Section */}
-        {relatedArticles.length > 0 && (
-          <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-16 border-t border-cloud-grey-border">
-            <div className="mb-8">
-              <span className="text-xs font-mono font-bold text-advisory-gold uppercase tracking-wider block mb-1">
-                Continue Reading
-              </span>
-              <h2 className="text-2xl font-heading font-bold text-rely-navy">
-                Related Articles & Insights
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedArticles.map((rel, idx) => (
-                <Reveal
-                  key={rel.slug}
-                  delay={idx * 0.1}
-                  distance={20}
-                  className="bg-white border border-cloud-grey-border p-6 rounded-2xl hover:border-advisory-gold hover:shadow-card transition-all flex flex-col justify-between group"
-                >
-                  <div>
-                    <span className="text-[11px] font-semibold uppercase px-2.5 py-0.5 rounded-full bg-advisory-gold/10 text-rely-navy border border-advisory-gold/30 mb-3 inline-block">
-                      {rel.category}
-                    </span>
-                    <h3 className="font-heading font-bold text-base text-rely-navy group-hover:text-advisory-gold transition-colors mb-2 line-clamp-2">
-                      <Link href={`/insights/${rel.slug}`}>{rel.title}</Link>
-                    </h3>
-                    <p className="text-xs text-gray-600 line-clamp-2 mb-4">
-                      {rel.summary}
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-cloud-grey flex items-center justify-between text-xs">
-                    <span className="text-gray-500">{rel.readTime}</span>
-                    <Link
-                      href={`/insights/${rel.slug}`}
-                      className="font-semibold text-rely-navy inline-flex items-center gap-1 group-hover:text-advisory-gold transition-colors"
-                    >
-                      Read <ArrowRight className="w-3.5 h-3.5 text-advisory-gold group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+        {!!relatedArticles.length && <section className={styles.related}>
+          <div className={styles.container}>
+            <div className={styles.relatedHeader}><div><span className={styles.label}>KEEP EXPLORING</span><h2>A fresh perspective for your next step.</h2></div><Link href="/insights">All insights <ArrowRight size={16} /></Link></div>
+            <div className={styles.relatedGrid}>{relatedArticles.map((rel, index) => (
+              <Link href={`/insights/${rel.slug}`} key={rel.slug} className={styles.relatedCard}>
+                <div className={styles.cardTop}><span>{rel.category}</span><span>{String(index + 1).padStart(2, '0')}</span></div>
+                <h3>{rel.title}</h3><p>{rel.summary}</p>
+                <div className={styles.cardFooter}><span>{rel.readTime}</span><span>Read insight <ArrowRight size={17} /></span></div>
+              </Link>
+            ))}</div>
           </div>
-        )}
+        </section>}
       </article>
-
-      <CTASection
-        title="Check your finance operations resilience"
-        description="Book a focused 30-minute review to identify your key operational pressure points and the most practical next step."
-        buttonText="Book a Finance Operations Review"
-        buttonHref="/book-a-review"
-      />
+      <CTASection title="Check your finance operations resilience" description="Book a focused 30-minute review to identify your key operational pressure points and the most practical next step." buttonText="Book a Finance Operations Review" buttonHref="/book-a-review" />
     </>
   );
 }
