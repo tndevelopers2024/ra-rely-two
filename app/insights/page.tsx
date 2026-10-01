@@ -147,14 +147,14 @@ export default function InsightsPage() {
 
           {/* Articles & Guides Section with Explorer */}
           <div>
-            <div className="mb-6">
-              <span className="text-xs font-mono font-bold text-advisory-gold tracking-wider uppercase block mb-1">
+            <div className="mb-10 sm:mb-14 lg:mb-16">
+              <span className="text-xs font-mono font-bold text-advisory-gold tracking-wider uppercase block mb-2">
                 Knowledge Base & Thought Leadership
               </span>
-              <h2 className="text-2xl font-heading font-bold text-rely-navy">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-rely-navy">
                 Articles & Operational Guides for Australian Businesses
               </h2>
-              <p className="text-sm text-gray-600 mt-1 max-w-2xl">
+              <p className="text-sm sm:text-base text-gray-600 mt-2 max-w-2xl leading-relaxed">
                 In-depth articles covering cash flow management, Power BI analytics, Australian regulatory updates (ATO, Fair Work, Privacy Act), and scalable finance operations.
               </p>
             </div>
