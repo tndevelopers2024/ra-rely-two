@@ -34,7 +34,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: article.summary,
       type: 'article',
       publishedTime: article.date,
-      authors: [article.author.name],
     },
   };
 }
@@ -79,11 +78,6 @@ export default async function ArticlePage({ params }: Props) {
                 <span>Practical guidance for<br />Australian businesses</span>
               </div>
             </div>
-            <div className={styles.authorStrip}>
-              <div className={styles.avatar}>{article.author.name.split(' ').map(name => name.charAt(0)).join('')}</div>
-              <div><strong>{article.author.name}</strong><span>{article.author.role} · {article.author.organisation || 'Rely Advisory Group'}</span></div>
-              <span className={styles.authorLabel}>THE ADVISORY PERSPECTIVE</span>
-            </div>
           </div>
         </header>
 
@@ -113,11 +107,6 @@ export default async function ArticlePage({ params }: Props) {
             )}
             <div className={styles.body} dangerouslySetInnerHTML={{ __html: content }} />
             {!!article.tags?.length && <div className={styles.tags}><span className={styles.label}>EXPLORE THE TOPICS</span><div>{article.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>}
-            <div className={styles.authorCard}>
-              <div className={styles.avatar}>{article.author.name.split(' ').map(name => name.charAt(0)).join('')}</div>
-              <div><span className={styles.label}>WRITTEN BY</span><h3>{article.author.name}</h3><p>{article.author.role} · {article.author.organisation || 'Rely Advisory Group'}</p></div>
-              <Link href="/contact" aria-label={`Contact ${article.author.name}`}><ArrowRight size={20} /></Link>
-            </div>
             <p className={styles.disclaimer}><strong>Australian General Advice Disclaimer:</strong> The information provided in this publication is for general operational guidance and educational purposes only. It does not constitute formal taxation, legal, or licensed financial product advice. Australian businesses should consult their registered Tax Agent, legal counsel, or Rely Advisory Group specialist to evaluate their specific circumstances.</p>
           </div>
         </div>

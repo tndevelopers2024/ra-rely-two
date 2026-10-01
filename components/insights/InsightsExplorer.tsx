@@ -78,8 +78,6 @@ export const InsightsExplorer: React.FC<InsightsExplorerProps> = ({ articles }) 
                 {/* Card Footer: Author & Link */}
                 <div className="pt-4 border-t border-cloud-grey flex items-center justify-between">
                   <div className="text-[11px] text-gray-500">
-                    <span className="font-semibold text-rely-navy">{art.author.name}</span>
-                    <span className="mx-1">•</span>
                     <span>{art.date}</span>
                   </div>
                   <span
