@@ -67,6 +67,8 @@ Refer to `PLACEHOLDERS.md` and the master content document for items requiring a
 - [x] Complete health-check scoring and SMTP newsletter signup requests
 
 ### Static export
+For the full production website with working email forms, follow [the Webcentral hosting guide](HOSTING-GUIDE.md).
+
 Run `npm run export:static` to generate `out/` without changing the development server configuration. The build uses an isolated temporary copy and omits the Next.js POST API routes. The export includes all public pages, article pages, assets, and the browser-only health check.
 
 For Webcentral cPanel hosting, upload the contents of `out/` into `public_html` (or the domain's document root). Contact, review and newsletter email forms require compatible server-side handlers for `/api/contact` and `/api/newsletter`; uploading only the static export will not enable email delivery. See `out/DEPLOYMENT.txt`. Never upload `.env.local` to a public folder.
