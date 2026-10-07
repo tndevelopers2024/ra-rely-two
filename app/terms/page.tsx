@@ -30,6 +30,7 @@ export default function TermsPage() {
         </div>
 
         <div className="space-y-6 text-sm text-charcoal leading-relaxed">
+          <p className="text-charcoal-muted">Rely Advisory Group · ABN 16 701 065 367</p>
           <section>
             <h2 className="text-lg font-heading font-bold text-rely-navy mb-2">General information only</h2>
             <p className="text-charcoal-muted">

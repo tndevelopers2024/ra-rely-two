@@ -5,10 +5,12 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ---
 
 ## 1. Contact Details & Business Registration
-- [x] **Email Address:** Updated to `contact@relyadvisory.com.au` (General Enquiries) and `rogerm@relyadvisory.com.au` (Direct Contact) across `Footer.tsx`, `app/contact/page.tsx`, `app/privacy/page.tsx`, and `app/page.tsx` (Schema JSON-LD).
-- [x] **Telephone Number:** Updated to `0433 250 700` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
+- [x] **Email Address:** Only `info@relyadvisory.com.au` appears publicly and links to the enquiry form. Form recipients are Info and `rogerm@relyadvisory.com.au`, configured only in the server route. Monica is not a recipient.
+- [x] **Telephone Number:** Updated to `+61 433 250 700` with `tel:+61433250700` links.
 - [x] **Physical Address / Office:** Updated to `6 Welford Circuit, North Kellyville NSW 2155` (`Footer.tsx`, `app/contact/page.tsx`, `app/page.tsx` schema).
-- [ ] **ABN / Legal Entity Name:** Confirm legal entity name and Australian Business Number (ABN). (Removed unverified placeholder from footer; re-add when verified).
+- [x] **ABN:** Client-supplied `16701065367` added to footer, terms and homepage schema.
+- [ ] **Legal Entity Name:** Confirm the registered legal entity name.
+- [ ] **Form Email Delivery:** SMTP delivery is implemented for contact and review requests. Configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD` and `SMTP_FROM`, then verify delivery to both recipients before launch.
 - [x] **WhatsApp Business Number:** Set to `61433250700` (`components/ui/WhatsAppButton.tsx`, matching official phone `0433 250 700`).
 
 ---
@@ -23,7 +25,7 @@ This file catalogs every placeholder currently in the codebase that must be veri
 ## 3. Legal & Regulatory Documents
 - [ ] **Privacy Policy (`/privacy`):**
   - Replace `[insert date]` with actual policy publication/revision date.
-  - [x] Replaced `[privacy email]` with `contact@relyadvisory.com.au` and `rogerm@relyadvisory.com.au`.
+  - [x] Privacy contact shows only `info@relyadvisory.com.au`, linked to the enquiry form.
   - Confirm any offshore data hosting or overseas delivery arrangements.
 - [ ] **Terms & Service Disclaimer (`/terms`):**
   - [x] Replaced `[insert Australian jurisdiction]` with `NSW`.

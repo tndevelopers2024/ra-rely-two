@@ -11,6 +11,8 @@
 
 ## Executive Summary & Production Status
 
+**Client corrections (7 October 2026):** Public email is now `info@relyadvisory.com.au`, linked to the enquiry form. Roger's email is private and used only as a form recipient alongside Info. Phone links use `+61433250700`; ABN `16701065367` is displayed in the footer and terms and included in homepage schema. SMTP delivery for contact and review forms is implemented, pending mailbox credentials and live inbox verification. These corrections supersede older contact details and email implementation notes below. The registered entity name still needs confirmation.
+
 The Rely Advisory Group web platform has undergone an extensive end-to-end production audit, hardening, and verification cycle. The application is built upon Next.js 16 App Router with React 19, TypeScript, and Tailwind CSS, adhering to top-tier enterprise standards for performance, security, and responsive UX across all modern device viewports.
 
 ### System Health & Quality Gates

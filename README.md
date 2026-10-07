@@ -40,6 +40,11 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Enquiry email delivery
+Copy the SMTP section in `.env.example` into `.env.local`, and set the mailbox provider's host, port, username, password (or app password), and authorised sender. Port 587 uses required STARTTLS; port 465 uses TLS from connection start. Add the same variables to the hosting environment.
+
+Contact and review requests are emailed to `info@relyadvisory.com.au` and `rogerm@relyadvisory.com.au`. Roger's address stays server-side. Replies go to the visitor's email. The forms report a failure if SMTP is unconfigured or the server does not accept both recipients; they no longer simulate delivery. Verify real inbox delivery after configuring the mailbox.
+
 ### 3. Build for Production
 ```bash
 npm run build
@@ -53,4 +58,5 @@ Refer to `PLACEHOLDERS.md` and the master content document for items requiring a
 - [ ] Confirm legal entity name, ABN, and contact details
 - [ ] Legal review of `/privacy` and `/terms`
 - [ ] Confirm approved founder biography for `/about`
-- [ ] Wire form endpoints (`/api/contact`, `/api/book-review`, `/api/health-check`) to your CRM/email provider
+- [ ] Configure SMTP for `/api/contact` (used by contact and review forms) and verify inbox delivery
+- [ ] Complete health-check and newsletter submission handling

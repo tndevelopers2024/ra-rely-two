@@ -40,19 +40,15 @@ export default function HomePage() {
       'Finance operations, accounts payable, accounts receivable, finance process improvement and management reporting for businesses across Australia.',
     url: 'https://relyadvisory.com.au',
     logo: 'https://relyadvisory.com.au/logo.svg',
-    email: 'contact@relyadvisory.com.au',
-    telephone: '0433 250 700',
+    email: 'info@relyadvisory.com.au',
+    telephone: '+61433250700',
+    taxID: '16701065367',
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        email: 'contact@relyadvisory.com.au',
+        email: 'info@relyadvisory.com.au',
         contactType: 'customer support',
       },
-      {
-        '@type': 'ContactPoint',
-        email: 'rogerm@relyadvisory.com.au',
-        contactType: 'direct contact',
-      }
     ],
     address: {
       '@type': 'PostalAddress',

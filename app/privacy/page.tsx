@@ -62,13 +62,9 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-heading font-bold text-rely-navy">4. Contact and complaints</h2>
             <p className="text-sm leading-relaxed text-charcoal-muted">
               Privacy questions or complaints may be sent to{' '}
-              <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-rely-navy hover:text-advisory-gold transition-colors font-semibold text-xs">
-                contact@relyadvisory.com.au
+              <a href="/contact#enquiry-form" className="font-mono text-rely-navy hover:text-advisory-gold transition-colors font-semibold text-xs">
+                info@relyadvisory.com.au
               </a>{' '}
-              or directly to{' '}
-              <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-rely-navy hover:text-advisory-gold transition-colors font-semibold text-xs">
-                rogerm@relyadvisory.com.au
-              </a>
               . Rely will respond within a reasonable period and explain available escalation pathways where applicable.
             </p>
           </section>

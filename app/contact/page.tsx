@@ -71,11 +71,7 @@ export default function ContactPage() {
                     <div className="space-y-1 mt-1">
                       <div>
                         <span className="text-xs text-charcoal">General Enquiries: </span>
-                        <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">contact@relyadvisory.com.au</a>
-                      </div>
-                      <div>
-                        <span className="text-xs text-charcoal">Direct Contact: </span>
-                        <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-xs hover:text-advisory-gold transition-colors">rogerm@relyadvisory.com.au</a>
+                        <a href="#enquiry-form" className="font-mono text-xs hover:text-advisory-gold transition-colors">info@relyadvisory.com.au</a>
                       </div>
                     </div>
                   </div>
@@ -93,7 +89,7 @@ export default function ContactPage() {
                   <Phone className="w-4 h-4 text-advisory-gold shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold text-rely-navy">Phone</div>
-                    <a href="tel:0433250700" className="text-sm hover:text-advisory-gold transition-colors">0433 250 700</a>
+                    <a href="tel:+61433250700" className="text-sm hover:text-advisory-gold transition-colors">+61 433 250 700</a>
                   </div>
                 </div>
 
@@ -126,7 +122,8 @@ export default function ContactPage() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form id="enquiry-form" tabIndex={-1} onSubmit={handleSubmit} className="space-y-5 scroll-mt-32">
+              <input type="hidden" name="form" value="contact" />
               {/* Honeypot field - invisible to users */}
               <div style={{ display: 'none' }} aria-hidden="true">
                 <label htmlFor="website">Website</label>

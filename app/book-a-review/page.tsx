@@ -80,6 +80,7 @@ export default function BookReviewPage() {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            <input type="hidden" name="form" value="review" />
             <div style={{ display: 'none' }} aria-hidden="true">
               <label htmlFor="website">Website</label>
               <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />

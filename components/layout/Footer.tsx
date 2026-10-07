@@ -198,22 +198,16 @@ export const Footer: React.FC = () => {
                   <div className="flex flex-col space-y-1">
                     <div>
                       <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">General Enquiries</span>
-                      <a href="mailto:contact@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
-                        contact@relyadvisory.com.au
-                      </a>
-                    </div>
-                    <div className="mt-2">
-                      <span className="text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Direct Contact</span>
-                      <a href="mailto:rogerm@relyadvisory.com.au" className="font-mono text-white/75 hover:text-white transition-colors">
-                        rogerm@relyadvisory.com.au
-                      </a>
+                      <Link href="/contact#enquiry-form" className="font-mono text-white/75 hover:text-white transition-colors">
+                        info@relyadvisory.com.au
+                      </Link>
                     </div>
                   </div>
                 </li>
                 <li className="flex items-center gap-2.5 flex-wrap">
                   <Phone className="w-3.5 h-3.5 text-advisory-gold shrink-0" />
-                  <a href="tel:0433250700" className="font-mono text-white/75 hover:text-white transition-colors">
-                    0433 250 700
+                  <a href="tel:+61433250700" className="font-mono text-white/75 hover:text-white transition-colors">
+                    +61 433 250 700
                   </a>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -401,7 +395,7 @@ export const Footer: React.FC = () => {
             <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-white/55 sm:flex-row sm:items-center sm:justify-between">
               <p suppressHydrationWarning>
                 © {new Date().getFullYear()} Rely Advisory Group. All rights
-                reserved.
+                reserved. ABN 16 701 065 367.
               </p>
 
               <button
