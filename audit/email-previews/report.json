@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "email": "contact",
+      "width": 760,
+      "status": "PASS"
+    },
+    {
+      "email": "contact",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "email": "review",
+      "width": 760,
+      "status": "PASS"
+    },
+    {
+      "email": "review",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "email": "newsletter",
+      "width": 760,
+      "status": "PASS"
+    },
+    {
+      "email": "newsletter",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "check": "Untrusted text is escaped and long messages wrap",
+      "status": "PASS"
+    }
+  ],
+  "realEmailsSent": 0
+}

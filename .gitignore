@@ -39,3 +39,8 @@ next-env.d.ts
 # Playwright
 test-results/
 playwright-report/
+
+# Static website upload archive
+/out.zip
+/.deployment/
+/.production-backups/

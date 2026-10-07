@@ -132,10 +132,10 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
+                  <label htmlFor="contact-name" className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                     Your Name *
                   </label>
-                  <input
+                  <input id="contact-name"
                     type="text"
                     name="name"
                     required
@@ -143,10 +143,10 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
+                  <label htmlFor="contact-business" className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                     Business Name *
                   </label>
-                  <input
+                  <input id="contact-business"
                     type="text"
                     name="business"
                     required
@@ -157,10 +157,10 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
+                  <label htmlFor="contact-email" className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                     Email Address *
                   </label>
-                  <input
+                  <input id="contact-email"
                     type="email"
                     name="email"
                     required
@@ -168,10 +168,10 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
+                  <label htmlFor="contact-phone" className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                     Phone Number
                   </label>
-                  <input
+                  <input id="contact-phone"
                     type="tel"
                     name="phone"
                     className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none"
@@ -180,10 +180,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
+                <label htmlFor="contact-type" className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                   Enquiry Type
                 </label>
-                <select name="type" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none bg-white">
+                <select id="contact-type" name="type" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold outline-none bg-white">
                   <option>General enquiry</option>
                   <option>Accounts Payable enquiry</option>
                   <option>Accounts Receivable enquiry</option>
@@ -194,10 +194,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
+                <label htmlFor="contact-message" className="block text-xs font-heading font-semibold uppercase text-rely-navy mb-1">
                   Message *
                 </label>
-                <textarea
+                <textarea id="contact-message"
                   name="message"
                   rows={4}
                   required

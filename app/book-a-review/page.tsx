@@ -88,10 +88,10 @@ export default function BookReviewPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+                <label htmlFor="review-name" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                   Full Name <span className="text-red-500">*</span>
                 </label>
-                <input
+                <input id="review-name"
                   type="text"
                   name="name"
                   required
@@ -100,10 +100,10 @@ export default function BookReviewPage() {
                 />
               </div>
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+                <label htmlFor="review-business" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                   Business Name <span className="text-red-500">*</span>
                 </label>
-                <input
+                <input id="review-business"
                   type="text"
                   name="business"
                   required
@@ -115,10 +115,10 @@ export default function BookReviewPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+                <label htmlFor="review-email" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                   Work Email <span className="text-red-500">*</span>
                 </label>
-                <input
+                <input id="review-email"
                   type="email"
                   name="email"
                   required
@@ -127,10 +127,10 @@ export default function BookReviewPage() {
                 />
               </div>
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+                <label htmlFor="review-phone" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                   Telephone <span className="text-xs text-charcoal-muted font-normal">(Optional)</span>
                 </label>
-                <input
+                <input id="review-phone"
                   type="tel"
                   name="phone"
                   placeholder="0400 000 000"
@@ -141,10 +141,10 @@ export default function BookReviewPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+                <label htmlFor="review-employees" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                   Number of Employees
                 </label>
-                <select name="employees" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold focus:ring-1 focus:ring-advisory-gold outline-none bg-white">
+                <select id="review-employees" name="employees" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold focus:ring-1 focus:ring-advisory-gold outline-none bg-white">
                   <option value="">Select range...</option>
                   <option value="1-10">1 – 10 employees</option>
                   <option value="11-50">11 – 50 employees</option>
@@ -153,10 +153,10 @@ export default function BookReviewPage() {
                 </select>
               </div>
               <div>
-                <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+                <label htmlFor="review-accounting_system" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                   Primary Accounting System
                 </label>
-                <select name="accounting_system" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold focus:ring-1 focus:ring-advisory-gold outline-none bg-white">
+                <select id="review-accounting_system" name="accounting_system" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold focus:ring-1 focus:ring-advisory-gold outline-none bg-white">
                   <option value="">Select system...</option>
                   <option value="Xero">Xero</option>
                   <option value="MYOB">MYOB</option>
@@ -167,10 +167,10 @@ export default function BookReviewPage() {
             </div>
 
             <div>
-              <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+              <label htmlFor="review-interest" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                 Primary Area of Interest
               </label>
-              <select name="interest" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold focus:ring-1 focus:ring-advisory-gold outline-none bg-white">
+              <select id="review-interest" name="interest" className="w-full px-5 py-2.5 text-sm rounded-full border border-cloud-grey-border focus:border-advisory-gold focus:ring-1 focus:ring-advisory-gold outline-none bg-white">
                 <option value="ap">Accounts Payable Support</option>
                 <option value="ar">Accounts Receivable & Cash Flow</option>
                 <option value="process">Finance Process Improvement</option>
@@ -181,10 +181,10 @@ export default function BookReviewPage() {
             </div>
 
             <div>
-              <label className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
+              <label htmlFor="review-challenge" className="block text-xs font-heading font-semibold uppercase tracking-wider text-rely-navy mb-2">
                 Primary Challenge or Objective
               </label>
-              <textarea
+              <textarea id="review-challenge"
                 name="challenge"
                 rows={3}
                 placeholder="Briefly describe what you are looking to streamline or improve..."

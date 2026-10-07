@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { z } from 'zod';
+import { getMailRecipients } from '@/lib/mail-recipients';
+import { formatEmailInterest, renderNotificationEmail } from '@/lib/email-template';
 
 export const runtime = 'nodejs';
 
-// Recipients stay on the server and cannot be overridden by submissions.
-const recipients = ['info@relyadvisory.com.au', 'rogerm@relyadvisory.com.au'];
 const submissionSchema = z.object({
   form: z.enum(['contact', 'review']).default('contact'),
   name: z.string().trim().min(1).max(200),
@@ -44,7 +44,8 @@ export async function POST(request: Request) {
   }
   const { SMTP_HOST, SMTP_USER, SMTP_PASSWORD, SMTP_FROM } = process.env;
   const port = Number(process.env.SMTP_PORT || '587');
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASSWORD || !SMTP_FROM || !Number.isInteger(port) || port < 1 || port > 65535) {
+  const recipients = getMailRecipients('FORM_MAIL_RECIPIENTS');
+  if (!recipients || !SMTP_HOST || !SMTP_USER || !SMTP_PASSWORD || !SMTP_FROM || !Number.isInteger(port) || port < 1 || port > 65535) {
     return NextResponse.json({ success: false, error: 'We could not send your enquiry. Please call +61 433 250 700.' }, { status: 503 });
   }
   const data = parsed.data;
@@ -74,6 +75,31 @@ export async function POST(request: Request) {
       replyTo: data.email,
       subject: data.form === 'review' ? 'New operations review request — Rely website' : 'New enquiry — Rely website',
       text: fields.filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`).join('\n\n'),
+      html: renderNotificationEmail({
+        category: data.form === 'review' ? 'Free 30-minute review' : 'Website enquiry',
+        title: data.form === 'review' ? 'A new review request' : 'A new conversation',
+        introduction: data.form === 'review' ? 'A visitor would like to discuss their finance operations. Their details and priorities are below.' : 'Someone has reached out through the Rely website. Here is everything you need to follow up.',
+        sections: [
+          { title: 'Contact details', details: [
+            { label: 'Name', value: data.name }, { label: 'Business', value: data.business },
+            { label: 'Email', value: data.email }, { label: 'Phone', value: data.phone },
+          ] },
+          { title: data.form === 'review' ? 'Review priorities' : 'Enquiry details', details: [
+            { label: 'Enquiry type', value: data.type },
+            { label: 'Employees', value: data.employees ? data.employees + ' employees' : undefined },
+            { label: 'Accounting system', value: data.accounting_system === 'QuickBooks' ? 'QuickBooks Online' : data.accounting_system },
+            { label: 'Area of interest', value: formatEmailInterest(data.interest) },
+            { label: 'Consent to contact', value: data.consent ? 'Confirmed' : undefined },
+          ] },
+        ],
+        message: data.form === 'review'
+          ? { title: 'Current challenge or objective', value: data.challenge || '' }
+          : { title: 'Their message', value: data.message || '' },
+        replyTo: data.email,
+        actionLabel: data.form === 'review' ? 'Reply about the review' : 'Reply to this enquiry',
+        receivedAt: new Date(),
+        footer: data.form === 'review' ? 'Submitted through Book a Review. This is a request to arrange a conversation; no appointment has been confirmed.' : 'Submitted through the Contact form on the Rely Advisory Group website.',
+      }),
     });
     if (!recipients.every(recipient => result.accepted.some(address => String(address).toLowerCase() === recipient))) {
       throw new Error('SMTP did not accept all enquiry recipients.');

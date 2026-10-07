@@ -1,0 +1,430 @@
+{
+  "checkedAt": "2026-10-07T09:57:30.675Z",
+  "baseURL": "http://localhost:3000",
+  "browser": "installed Google Chrome",
+  "realEmailsSent": 0,
+  "passed": 105,
+  "failed": 0,
+  "results": [
+    {
+      "name": "1440px /contact blocks empty submission",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact requires name",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact requires business",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact requires email",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact requires message",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact rejects invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact all type choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact pending state, full payload, and success reset",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact SMTP failure retains input and permits retry",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact network failure retains input",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact optional fields may be empty",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact visible fields have associated labels",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /contact no JavaScript errors",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review blocks empty submission",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review requires name",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review requires business",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review requires email",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review requires consent",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review rejects invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review all employees choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review all accounting_system choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review all interest choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review pending state, full payload, and success reset",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review SMTP failure retains input and permits retry",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review network failure retains input",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review optional fields may be empty",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review visible fields have associated labels",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px /book-a-review no JavaScript errors",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px health check all 10 radio groups selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px health check answers have distinct values",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px health check produces a result",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px newsletter rejects empty and invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "1440px newsletter submits valid email",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact blocks empty submission",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact requires name",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact requires business",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact requires email",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact requires message",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact rejects invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact all type choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact pending state, full payload, and success reset",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact SMTP failure retains input and permits retry",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact network failure retains input",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact optional fields may be empty",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact visible fields have associated labels",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /contact no JavaScript errors",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review blocks empty submission",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review requires name",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review requires business",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review requires email",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review requires consent",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review rejects invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review all employees choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review all accounting_system choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review all interest choices selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review pending state, full payload, and success reset",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review SMTP failure retains input and permits retry",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review network failure retains input",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review optional fields may be empty",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review visible fields have associated labels",
+      "status": "PASS"
+    },
+    {
+      "name": "390px /book-a-review no JavaScript errors",
+      "status": "PASS"
+    },
+    {
+      "name": "390px health check all 10 radio groups selectable",
+      "status": "PASS"
+    },
+    {
+      "name": "390px health check answers have distinct values",
+      "status": "PASS"
+    },
+    {
+      "name": "390px health check produces a result",
+      "status": "PASS"
+    },
+    {
+      "name": "390px newsletter rejects empty and invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "390px newsletter submits valid email",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects empty payload",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects missing name",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects whitespace name",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects missing business",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects whitespace business",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects missing message",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects whitespace message",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects invalid form type",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects review without consent",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized name",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized business",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized email",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized phone",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized type",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized message",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized employees",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized accounting_system",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized interest",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects oversized challenge",
+      "status": "PASS"
+    },
+    {
+      "name": "API rejects malformed JSON",
+      "status": "PASS"
+    },
+    {
+      "name": "API silently discards honeypot submissions",
+      "status": "PASS"
+    },
+    {
+      "name": "Backend contact email contains every submitted field",
+      "status": "PASS"
+    },
+    {
+      "name": "Backend review email contains every submitted field",
+      "status": "PASS"
+    },
+    {
+      "name": "Backend reports partial SMTP recipient rejection",
+      "status": "PASS"
+    },
+    {
+      "name": "Backend reports SMTP delivery failure",
+      "status": "PASS"
+    },
+    {
+      "name": "Backend missing password blocks delivery",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter API rejects empty payload",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter API rejects invalid email",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter API rejects missing consent",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter API rejects false consent",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter API rejects oversized email",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter backend sends signup details only to configured Gmail",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter backend ignores honeypot without sending",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter backend handles SMTP error",
+      "status": "PASS"
+    },
+    {
+      "name": "Newsletter backend handles SMTP partial",
+      "status": "PASS"
+    },
+    {
+      "name": "All form routes fail safely without configured recipients",
+      "status": "PASS"
+    },
+    {
+      "name": "Recipient configuration validates, normalises and deduplicates addresses",
+      "status": "PASS"
+    },
+    {
+      "name": "Contact ignores visitor-supplied recipient overrides",
+      "status": "PASS"
+    }
+  ]
+}

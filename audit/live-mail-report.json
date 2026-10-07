@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-07T10:10:13.438Z",
+  "destination": "[removed personal test address]",
+  "results": [
+    {
+      "form": "/contact",
+      "success": true,
+      "status": 200,
+      "destination": "[removed personal test address]"
+    },
+    {
+      "form": "/book-a-review",
+      "success": true,
+      "status": 200,
+      "destination": "[removed personal test address]"
+    },
+    {
+      "form": "newsletter",
+      "success": true,
+      "status": 200,
+      "destination": "[removed personal test address]"
+    }
+  ]
+}
