@@ -108,11 +108,6 @@ const security = [
     description: 'Preparation and authorisation never sit with the same person. Payment release always stays with your team.',
   },
   {
-    icon: 'Fingerprint',
-    title: 'Multi-factor authentication',
-    description: 'MFA enforced on every system that supports it, for every Rely user, without exception.',
-  },
-  {
     icon: 'Laptop',
     title: 'Managed device standards',
     description: 'Work performed on managed devices with disk encryption, screen locks and current security updates.',

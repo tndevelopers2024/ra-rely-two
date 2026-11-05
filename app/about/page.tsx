@@ -2,7 +2,6 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import { CTASection } from '@/components/ui/CTASection';
-import { User } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Rely Advisory Group',
@@ -61,22 +60,17 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Founder Bio Placeholder with distinct styling */}
-          <div className="p-8 bg-warm-ivory border-2 border-dashed border-advisory-gold rounded-xl">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-rely-navy text-advisory-gold flex items-center justify-center">
-                <User className="w-5 h-5" />
-              </div>
+          <div className="rounded-xl border-2 border-dashed border-advisory-gold bg-warm-ivory p-6 sm:p-8">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-10 md:items-start">
               <div>
-                <h3 className="font-heading font-bold text-lg text-rely-navy">Rely Advisory Leadership</h3>
-                <span className="text-xs font-mono bg-advisory-gold/20 text-rely-navy px-2 py-0.5 rounded">
-                  Founder & Engagement Lead
-                </span>
+                <p className="mb-4 font-heading text-xs font-semibold uppercase tracking-widest text-advisory-gold-dark">Experience behind Rely</p>
+                <h2 className="font-heading text-2xl sm:text-3xl font-bold leading-tight text-rely-navy">Practical experience.<br />Better business insight.</h2>
+              </div>
+              <div className="space-y-4 text-sm leading-relaxed text-charcoal md:border-l md:border-advisory-gold/40 md:pl-8">
+                <p>Built on years of experience across finance, forecasting, business operations, process improvement and performance reporting, Rely Advisory brings together practical commercial experience, industry benchmarking and modern reporting and analytical tools to help businesses gain greater visibility, identify opportunities and make better-informed decisions.</p>
+                <p>The focus is not simply on producing numbers or reports, but on turning information into meaningful insights and practical actions that can improve the way a business operates and performs.</p>
               </div>
             </div>
-            <p className="text-sm text-charcoal leading-relaxed">
-              Experience in customer insights, data analysis, executive reporting, finance operations improvement, and reporting tools. Verified formal qualifications, memberships, and a concise personal statement on why Rely was established will appear here before launch.
-            </p>
           </div>
         </div>
       </section>
