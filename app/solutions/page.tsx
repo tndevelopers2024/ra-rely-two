@@ -1,4 +1,6 @@
 import React from 'react';
+import { solutions } from '@/lib/data/solutions';
+import { FinanceJourney } from '@/components/solutions/FinanceJourney';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHero } from '@/components/ui/PageHero';
@@ -15,45 +17,10 @@ import { ArrowRight } from 'lucide-react';
 import { DynIcon } from '@/components/ui/DynIcon';
 
 export const metadata: Metadata = {
-  title: 'Outsourced finance solutions for growing businesses | Rely',
+  title: 'Finance Operations, BAS Readiness & Audit-Ready Support',
   description:
-    'Flexible accounts payable, receivables, finance process improvement and management reporting support. Start with one process or build an integrated finance operations service.',
+    'Connected finance operations, BAS readiness, reporting, audit-ready records and process improvement support for growing businesses.',
 };
-
-const solutions = [
-  {
-    title: 'Accounts Payable Support',
-    description:
-      'A controlled, visible supplier invoice and payment process, from receipt and coding through approval, payment preparation and reconciliation.',
-    href: '/solutions/accounts-payable',
-    icon: 'CreditCard',
-    points: ['Invoice capture & GST coding', 'Approval workflow routing', 'Payment run preparation', 'Statement reconciliation'],
-  },
-  {
-    title: 'Accounts Receivable Support',
-    description:
-      'Consistent billing, disciplined debtor follow-up and clear collection reporting so completed work turns into banked cash sooner.',
-    href: '/solutions/accounts-receivable',
-    icon: 'Receipt',
-    points: ['Billing schedule administration', 'Structured follow-up cycles', 'Receipt allocation', 'Debtor ageing & DSO reporting'],
-  },
-  {
-    title: 'Finance Process Improvement',
-    description:
-      'A review of how work actually moves through your finance function, then a redesign that is simpler, better controlled and ready to scale.',
-    href: '/solutions/process-improvement',
-    icon: 'GitMerge',
-    points: ['Current-state process mapping', 'Control gap assessment', 'Documented SOPs', 'System & automation tuning'],
-  },
-  {
-    title: 'Reporting & Business Insights',
-    description:
-      'Management packs, KPI dashboards and short-term cash flow visibility that explain what changed, why it matters and what to do next.',
-    href: '/solutions/reporting-insights',
-    icon: 'BarChart3',
-    points: ['Monthly management packs', 'Rolling cash flow forecast', 'Interactive financial dashboards', 'Commentary & actions'],
-  },
-];
 
 const included = [
   {
@@ -159,20 +126,23 @@ export default function SolutionsPage() {
         highlights={['Start with one process', 'Documented and handed over', 'Month-to-month once live']}
       />
 
-      {/* ---- The four services ---- */}
+      <FinanceJourney />
+
+      {/* Finance operations retains accounts payable and receivable as specialist services. */}
       <SectionTransition className="pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24 bg-white" aria-labelledby="services-heading">
         <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="WHAT WE RUN"
-            title="Four services, one operating standard"
+            title="Connected services, one operating standard"
             description="Each can be taken on its own or combined. Whatever the scope, the controls, documentation and reporting discipline are the same."
           />
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div id="finance-operations" className="grid scroll-mt-32 grid-cols-1 gap-6 md:grid-cols-2 auto-rows-fr">
             {solutions.map((item) => {
               return (
                 <div
                   key={item.title}
+                  data-solution-card
                   className="group relative flex flex-col overflow-hidden rounded-2xl border border-cloud-grey-border bg-white p-7 shadow-subtle transition-all duration-300 hover:-translate-y-1.5 hover:border-advisory-gold/55 hover:shadow-card-hover sm:p-8"
                 >
                   <div className="pointer-events-none absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-advisory-gold via-advisory-gold-light to-transparent transition-transform duration-500 group-hover:scale-x-100" />
@@ -195,9 +165,9 @@ export default function SolutionsPage() {
                   </ul>
                   <Link
                     href={item.href}
-                    className="mt-auto inline-flex items-center gap-2 font-heading text-sm font-semibold text-rely-navy transition-colors group-hover:text-advisory-gold-dark"
+                    className="mt-auto inline-flex min-h-11 items-center gap-2 font-heading text-sm font-semibold text-rely-navy transition-colors group-hover:text-advisory-gold-dark"
                   >
-                    View service details
+                    {item.cta}
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                   </Link>
                 </div>

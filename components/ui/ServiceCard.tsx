@@ -12,6 +12,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   href: string;
+  cta?: string;
   highlights?: string[];
   number?: string;
   className?: string;
@@ -25,6 +26,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   highlights,
   number,
   className = '',
+  cta = 'Explore Solution',
 }) => {
   return (
     <motion.div
@@ -78,9 +80,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="relative pt-4 border-t border-cloud-grey-border/60">
         <Link
           href={href}
-          className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-rely-navy group-hover:text-advisory-gold-dark transition-colors"
+          className="inline-flex min-h-11 items-center gap-2 text-sm font-heading font-semibold text-rely-navy group-hover:text-advisory-gold-dark transition-colors"
         >
-          Explore Solution
+          {cta}
           <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
         </Link>
       </div>

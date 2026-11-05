@@ -137,7 +137,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="TAILORED SUPPORT"
               title="Practical finance support built around your business"
-              description="Choose support for one specific process or build an integrated finance operations service tailored to your transaction volumes."
+              description="From day-to-day finance operations and BAS readiness to management reporting and audit-ready records, we help businesses build a stronger finance function."
               align="left"
               className="mb-0 max-w-2xl"
             />

@@ -18,37 +18,30 @@ import {
   useNavbar,
 } from "@/components/ui/resizable-navbar";
 
+import { financeJourney, solutions } from '@/lib/data/solutions';
+
 const navLinks = [
   { name: "Home", href: "/" },
   {
     name: "Solutions",
     href: "/solutions",
     submenu: [
-      {
-        name: "All Solutions",
-        href: "/solutions",
-        desc: "Custom finance operational support designed to scale.",
-      },
-      {
-        name: "Accounts Payable",
-        href: "/solutions/accounts-payable",
-        desc: "Controlled supplier invoice processing and approvals.",
-      },
-      {
-        name: "Accounts Receivable",
-        href: "/solutions/accounts-receivable",
-        desc: "Disciplined billing, debtor follow-up, and cash visibility.",
-      },
-      {
-        name: "Process Improvement",
-        href: "/solutions/process-improvement",
-        desc: "Workflow documentation, bottleneck removal, and controls.",
-      },
-      {
-        name: "Reporting & Insights",
-        href: "/solutions/reporting-insights",
-        desc: "Management packs, KPI dashboards, and dashboard reporting.",
-      },
+      { name: "All Solutions", href: "/solutions", desc: "Connected finance support designed to scale." },
+      ...financeJourney.flatMap((step) => [
+        {
+          ...step,
+          desc: step.name === 'Finance Operations'
+            ? 'Accounts payable, receivables and day-to-day finance support.'
+            : solutions.find((service) => service.href === step.href)!.description,
+        },
+        ...(step.name === 'Finance Operations'
+          ? solutions.slice(0, 2).map((service) => ({
+              name: service.title,
+              href: service.href,
+              desc: service.description,
+            }))
+          : []),
+      ]),
     ],
   },
   { name: "How We Work", href: "/how-we-work" },
@@ -129,6 +122,17 @@ function NavContent() {
               <div
                 key={item.name}
                 className="relative"
+                onFocus={() => { if (hasSubmenu) setActiveDropdown(item.name); }}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setActiveDropdown(null);
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape') {
+                    setActiveDropdown(null);
+                    event.currentTarget.querySelector('a')?.focus();
+                    setActiveDropdown(null);
+                  }
+                }}
                 onMouseEnter={() => {
                   setHoveredIndex(idx);
                   if (hasSubmenu) setActiveDropdown(item.name);
@@ -137,8 +141,9 @@ function NavContent() {
               >
                 <Link
                   href={item.href}
+                  aria-expanded={hasSubmenu ? activeDropdown === item.name : undefined}
                   className={cn(
-                    "relative flex items-center gap-1 rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors duration-200 whitespace-nowrap",
+                    "relative flex min-h-11 items-center gap-1 rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors duration-200 whitespace-nowrap",
                     isActive
                       ? "text-rely-navy font-semibold"
                       : "text-charcoal/85 hover:text-rely-navy",
@@ -184,7 +189,7 @@ function NavContent() {
                         }}
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[360px] z-50 pointer-events-auto"
                       >
-                        <div className="bg-white backdrop-blur-2xl rounded-2xl shadow-float-lg border border-cloud-grey-border overflow-hidden p-2">
+                        <div className="max-h-[calc(100dvh-120px)] overflow-y-auto bg-white backdrop-blur-2xl rounded-2xl shadow-float-lg border border-cloud-grey-border p-2">
                           <div className="grid gap-0.5">
                             {item.submenu?.map((subItem) => (
                               <Link
@@ -274,7 +279,7 @@ function NavContent() {
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "text-lg font-heading font-semibold py-1.5 transition-colors",
+                    "flex min-h-11 items-center text-lg font-heading font-semibold py-1.5 transition-colors",
                     pathname === item.href
                       ? "text-advisory-gold-dark"
                       : "text-rely-navy hover:text-advisory-gold-dark",
@@ -289,7 +294,7 @@ function NavContent() {
                         key={subItem.name}
                         href={subItem.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-xs text-charcoal/75 hover:text-rely-navy py-0.5 font-body"
+                        className="flex min-h-11 items-center text-sm text-charcoal/75 hover:text-rely-navy py-2 font-body"
                       >
                         {subItem.name}
                       </Link>

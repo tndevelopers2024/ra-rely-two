@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/solutions',
     '/solutions/accounts-payable',
     '/solutions/accounts-receivable',
+    '/solutions/bas-readiness',
+    '/solutions/audit-ready-finance',
     '/solutions/process-improvement',
     '/solutions/reporting-insights',
     '/how-we-work',

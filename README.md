@@ -72,3 +72,16 @@ For the full production website with working email forms, follow [the Webcentral
 Run `npm run export:static` to generate `out/` without changing the development server configuration. The build uses an isolated temporary copy and omits the Next.js POST API routes. The export includes all public pages, article pages, assets, and the browser-only health check.
 
 For Webcentral cPanel hosting, upload the contents of `out/` into `public_html` (or the domain's document root). Contact, review and newsletter email forms require compatible server-side handlers for `/api/contact` and `/api/newsletter`; uploading only the static export will not enable email delivery. See `out/DEPLOYMENT.txt`. Never upload `.env.local` to a public folder.
+
+## BAS readiness and audit-ready finance review
+
+Local review pages (run `npm run dev`):
+- [Solutions overview](http://localhost:3000/solutions)
+- [BAS Readiness & Finance Support](http://localhost:3000/solutions/bas-readiness)
+- [Audit-Ready Finance](http://localhost:3000/solutions/audit-ready-finance)
+
+Both pages use the approved change-brief copy. Accounts Payable and Accounts Receivable remain the specialist Finance Operations services, followed by BAS Readiness, Reporting & Insights, Audit-Ready Finance and Process Improvement. Shared navigation, homepage cards, footer, sitemap and service cross-links expose this journey.
+
+Primary enquiry links emit `contact_cta_click` to `window.dataLayer` and `rely:contact-cta` as a browser event. Fields are `service` (`bas-readiness` or `audit-ready-finance`), `cta_location` (`service_page`) and `destination` (`/contact#enquiry-form`). These measure enquiry intent, not completed submissions. No analytics provider is configured in this project; connect the event to the chosen provider before expecting reporting. Visitor details are excluded from the event.
+
+Review the approved wording with Rely Advisory before publishing. The preview is local; no staging or production deployment has been made. Form checks intercept submissions and do not verify real mailbox delivery. SMTP setup is described above.

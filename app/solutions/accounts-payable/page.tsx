@@ -1,4 +1,5 @@
 import React from 'react';
+import { FinanceJourney } from '@/components/solutions/FinanceJourney';
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -301,6 +302,7 @@ export default function AccountsPayablePage() {
         buttonText="Book an Accounts Payable Review"
         buttonHref="/book-a-review"
       />
+      <FinanceJourney />
     </>
   );
 }

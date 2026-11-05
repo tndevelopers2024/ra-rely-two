@@ -21,11 +21,10 @@ import {
 import { WordReveal } from "@/components/ui/WordReveal";
 import { NewsletterForm } from "@/components/layout/NewsletterForm";
 
+import { financeJourney } from '@/lib/data/solutions';
+
 const footerSolutions = [
-  { name: "Accounts Payable", href: "/solutions/accounts-payable" },
-  { name: "Accounts Receivable", href: "/solutions/accounts-receivable" },
-  { name: "Process Improvement", href: "/solutions/process-improvement" },
-  { name: "Reporting & Insights", href: "/solutions/reporting-insights" },
+  ...financeJourney,
   { name: "All Solutions", href: "/solutions" },
 ];
 
@@ -341,11 +340,12 @@ export const Footer: React.FC = () => {
               <strong className="font-semibold text-white/65">
                 General information only:
               </strong>{" "}
-              Rely Advisory Group provides finance operations, process
-              improvement and reporting support services. Regulated tax, BAS,
-              audit or financial advice services are provided only where
-              appropriately authorised or in collaboration with the
-              client&apos;s registered practitioner.
+              Rely Advisory Group provides finance operations, BAS readiness,
+              reporting, audit preparation support and process improvement. BAS
+              preparation and lodgement remain with your registered BAS or tax
+              agent. Rely does not perform independent audits or provide audit
+              opinions. Regulated tax or financial advice is provided only by
+              appropriately authorised practitioners.
             </p>
 
             <div className="flex flex-wrap items-center gap-2">

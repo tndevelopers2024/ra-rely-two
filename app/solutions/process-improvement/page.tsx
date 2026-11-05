@@ -1,4 +1,5 @@
 import React from 'react';
+import { FinanceJourney } from '@/components/solutions/FinanceJourney';
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -273,6 +274,7 @@ export default function ProcessImprovementPage() {
         buttonText="Book a Finance Process Review"
         buttonHref="/book-a-review"
       />
+      <FinanceJourney />
     </>
   );
 }
