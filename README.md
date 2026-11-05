@@ -85,3 +85,7 @@ Both pages use the approved change-brief copy. Accounts Payable and Accounts Rec
 Primary enquiry links emit `contact_cta_click` to `window.dataLayer` and `rely:contact-cta` as a browser event. Fields are `service` (`bas-readiness` or `audit-ready-finance`), `cta_location` (`service_page`) and `destination` (`/contact#enquiry-form`). These measure enquiry intent, not completed submissions. No analytics provider is configured in this project; connect the event to the chosen provider before expecting reporting. Visitor details are excluded from the event.
 
 Review the approved wording with Rely Advisory before publishing. The preview is local; no staging or production deployment has been made. Form checks intercept submissions and do not verify real mailbox delivery. SMTP setup is described above.
+
+### GitHub deployment
+
+Webcentral builds each successful push to `main` in a private release directory. The production worker runs `scripts/webcentral-watch-release.sh` and restarts the site when Webcentral updates `deploys/current`. The build copies the existing private mail configuration into each release; do not commit credentials. Check the deployment and worker logs and the public pages after changes.
