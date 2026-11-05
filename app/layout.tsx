@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
@@ -10,21 +10,9 @@ import { CustomCursor } from "@/components/ui/CustomCursor";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-  weight: ["500", "600", "700"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  weight: ["400", "500", "600"],
-});
+const geist = localFont({ src: './fonts/geist-latin.woff2', variable: '--font-sans', display: 'swap', weight: '100 900' });
+const montserrat = localFont({ src: './fonts/montserrat-latin.woff2', variable: '--font-montserrat', display: 'swap', weight: '100 900' });
+const inter = localFont({ src: './fonts/inter-latin.woff2', variable: '--font-inter', display: 'swap', weight: '100 900' });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://relyadvisory.com.au"),
