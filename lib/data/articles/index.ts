@@ -9,8 +9,12 @@ import { article as navigatingSuper } from './navigating-superannuation-guarante
 import { article as privacyAct } from './privacy-act-reforms-australian-sme-finance-data-security';
 import { article as fairWork } from './fair-work-compliance-payroll-risk-audit-guide';
 import { article as workingCapital } from './working-capital-management-high-interest-rate-australia';
+import { article as basReadiness } from './bas-readiness-checklist-australian-businesses';
+import { article as auditReady } from './audit-ready-finance-year-end-preparation';
 
-export const articles: Article[] = [
+const allArticles: Article[] = [
+  basReadiness,
+  auditReady,
   fiveFinancialDashboards,
   navigatingSuper,
   fairWork,
@@ -21,6 +25,19 @@ export const articles: Article[] = [
   sevenSignsReceivables,
   bookkeeperAccountant,
 ];
+
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+// Article dates are stored as "DD Month YYYY" (e.g. "05 November 2026").
+function articleTime(date: string): number {
+  const [day, month, year] = date.trim().split(/\s+/);
+  const monthIndex = MONTHS.indexOf(month?.toLowerCase());
+  if (monthIndex === -1) throw new Error(`Invalid article date: "${date}"`);
+  return Date.UTC(Number(year), monthIndex, Number(day));
+}
+
+// Newest first.
+export const articles: Article[] = [...allArticles].sort((a, b) => articleTime(b.date) - articleTime(a.date));
 
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);

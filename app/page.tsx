@@ -93,6 +93,8 @@ export default function HomePage() {
           'Accounts Receivable',
           'Process Improvement',
           'Management Reporting',
+          'BAS Readiness',
+          'Audit Management',
           'Financial Dashboards',
           'Cash Flow Visibility',
           'Finance Operations',
